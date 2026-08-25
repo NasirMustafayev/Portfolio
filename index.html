@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  html { background: #0b1622 url('uploads/469f6fe25bc2849f609e6e9880d4be2b.png') center top / cover no-repeat fixed; }
+  html, body { height: 100%; overflow: hidden; }
+  body { margin: 0; background: transparent; color: #f5f5f7; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", system-ui, sans-serif; -webkit-font-smoothing: antialiased; letter-spacing: -0.01em; }
+  a { color: #2997ff; text-decoration: none; }
+  a:hover { color: #2997ff; text-decoration: underline; }
+  @keyframes bgPan { 0% { transform: scale(1.06) translate3d(0,0,0) } 50% { transform: scale(1.12) translate3d(-1.2%,-1.6%,0) } 100% { transform: scale(1.06) translate3d(0,0,0) } }
+  @keyframes bgAur1 { 0% { transform: translate3d(-6%,2%,0) scale(1) } 50% { transform: translate3d(8%,-6%,0) scale(1.25) } 100% { transform: translate3d(-6%,2%,0) scale(1) } }
+  @keyframes bgAur2 { 0% { transform: translate3d(6%,-4%,0) scale(1.15) } 50% { transform: translate3d(-7%,6%,0) scale(1) } 100% { transform: translate3d(6%,-4%,0) scale(1.15) } }
+  @keyframes bgSheen { 0% { opacity: .16 } 50% { opacity: .38 } 100% { opacity: .16 } }
+  @keyframes hintDrift { 0%,100% { transform: translateY(0); opacity: .5 } 50% { transform: translateY(7px); opacity: 1 } }
+  @keyframes caretBlink { 0%,49% { opacity: 1 } 50%,100% { opacity: 0 } }
+</style>
+</helmet>
+
+<div style="position:relative">
+
+<div aria-hidden="true" style="position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden">
+  <div style="position:absolute;inset:-8%;background:url('uploads/469f6fe25bc2849f609e6e9880d4be2b.png') center top / cover no-repeat;will-change:transform;animation:bgPan 46s ease-in-out infinite"></div>
+  <div style="position:absolute;left:-20%;top:-25%;width:85%;height:85%;border-radius:50%;filter:blur(90px);background:radial-gradient(closest-side, rgba(41,151,255,.3), rgba(41,151,255,0) 70%);will-change:transform;animation:bgAur1 34s ease-in-out infinite"></div>
+  <div style="position:absolute;right:-22%;bottom:-28%;width:90%;height:90%;border-radius:50%;filter:blur(100px);background:radial-gradient(closest-side, rgba(160,110,255,.26), rgba(160,110,255,0) 70%);will-change:transform;animation:bgAur2 41s ease-in-out infinite"></div>
+  <div style="position:absolute;inset:0;background:linear-gradient(115deg, rgba(255,255,255,0) 38%, rgba(255,255,255,.07) 50%, rgba(255,255,255,0) 62%);animation:bgSheen 18s ease-in-out infinite"></div>
+  <div style="position:absolute;inset:0;background:linear-gradient(180deg, rgba(11,22,34,.42) 0%, rgba(11,22,34,.2) 45%, rgba(11,22,34,.6) 100%)"></div>
+</div>
+
+<section id="reveal" style="position:fixed;inset:0;z-index:60;pointer-events:none;opacity:{{ s.revealOp }}">
+  <div style="position:absolute;inset:0;overflow:hidden;background:#eef2f8">
+
+    <div style="position:absolute;inset:0;background:radial-gradient(120% 90% at 12% 4%, #ffe3bd 0%, rgba(255,227,189,0) 58%), radial-gradient(105% 85% at 88% 8%, #bfe0ff 0%, rgba(191,224,255,0) 60%), radial-gradient(130% 110% at 52% 118%, #e7cbff 0%, rgba(231,203,255,0) 64%)"></div>
+    <div style="position:absolute;inset:0;background:radial-gradient(120% 95% at 50% 26%, rgba(255,255,255,.55) 0%, rgba(255,255,255,0) 46%), radial-gradient(closest-side at 50% 50%, rgba(0,0,0,0) 34%, rgba(30,40,70,.16) 100%)"></div>
+
+    <div style="position:absolute;top:26px;left:36px;right:36px;display:flex;justify-content:space-between;align-items:baseline;z-index:6;opacity:{{ s.chromeOp }};text-shadow:none">
+      <span style="font-weight:600;letter-spacing:-.022em;font-size:19px;color:#15192a">Nasir Mustafayev</span>
+      <span style="font-size:12px;letter-spacing:-.005em;color:rgba(21,25,42,.62)">Front-End Developer / Software Engineer</span>
+    </div>
+
+    <div style="position:absolute;inset:0;transform-origin:50% 50%;transform:{{ s.zoom }}">
+    <div style="position:absolute;inset:0;perspective:2600px;perspective-origin:50% 42%">
+      <div style="position:absolute;left:50%;top:50%;width:980px;margin-left:-490px;transform-style:preserve-3d;transform-origin:50% 0%;transform:{{ s.rig }}">
+        <div style="position:relative;width:980px;height:694px;transform-style:preserve-3d">
+
+          <div style="position:absolute;inset:0;border-radius:22px;opacity:{{ s.chassisOp }};background-image:url('uploads/260304170026129955.webp');background-repeat:no-repeat;background-size:1736px 1749px;background-position:-378px -581px;box-shadow:0 30px 70px rgba(0,0,0,.55)"></div>
+          <div style="position:absolute;inset:0;border-radius:22px;background:linear-gradient(178deg, rgba(0,0,0,.42) 0%, rgba(0,0,0,.1) 22%, rgba(0,0,0,0) 55%);opacity:{{ s.deckShadeOp }}"></div>
+
+          <div style="position:absolute;opacity:{{ s.chassisOp }};left:10px;right:10px;top:692px;height:48px;transform-origin:50% 0%;transform:rotateX(-88deg);border-radius:4px 4px 30px 30px / 4px 4px 46px 46px;overflow:hidden;background:linear-gradient(180deg, oklch(0.97 0.002 270) 0%, oklch(0.88 0.002 270) 8%, oklch(0.72 0.003 270) 40%, oklch(0.6 0.004 272) 82%, oklch(0.5 0.005 272) 100%)">
+            <div style="position:absolute;inset:0;background:linear-gradient(90deg, oklch(0.46 0.005 272) 0%, rgba(0,0,0,0) 14%, rgba(255,255,255,.09) 42%, rgba(255,255,255,.09) 58%, rgba(0,0,0,0) 86%, oklch(0.46 0.005 272) 100%)"></div>
+            <div style="position:absolute;left:0;right:0;top:0;height:5px;background:linear-gradient(180deg, oklch(0.96 0.001 270), rgba(255,255,255,0))"></div>
+            <div style="position:absolute;left:50%;top:0;transform:translateX(-50%);width:198px;height:14px;border-radius:0 0 8px 8px;background:linear-gradient(180deg, oklch(0.58 0.004 272), oklch(0.74 0.003 270));box-shadow:inset 0 2px 3px rgba(0,0,0,.35)"></div>
+            <div style="position:absolute;left:56px;bottom:0;width:84px;height:9px;border-radius:4px 4px 0 0;background:oklch(0.3 0.004 272)"></div>
+            <div style="position:absolute;right:56px;bottom:0;width:84px;height:9px;border-radius:4px 4px 0 0;background:oklch(0.3 0.004 272)"></div>
+          </div>
+
+          <div style="position:absolute;left:0;top:0;width:980px;height:694px;transform-origin:50% 0%;transform-style:preserve-3d;transform:{{ s.lid }}">
+
+            <div style="position:absolute;inset:0;border-radius:22px;backface-visibility:hidden;-webkit-backface-visibility:hidden;transform:translateZ(0.6px);opacity:{{ s.lidBackOp }};background-image:url('uploads/f3a90365-ce36-4e8e-b33d-4b2408ca74b1_size1920_cropCenter.jpg');background-repeat:no-repeat;background-size:1046px 1048px;background-position:-33px -176px;box-shadow:0 26px 60px rgba(0,0,0,.5)"></div>
+
+            <div id="lidscreen" style="position:absolute;inset:0;border-radius:22px;opacity:{{ s.screenOp }};backface-visibility:hidden;-webkit-backface-visibility:hidden;transform:rotateX(180deg) translateZ(0.6px);background:oklch(0.13 0.002 270);box-shadow:inset 0 0 0 1.5px oklch(0.72 0.004 270), inset 0 0 0 3px oklch(0.3 0.002 270), 0 30px 60px rgba(0,0,0,.45);padding:9px;box-sizing:border-box">
+              <div id="lidinner" style="position:relative;width:100%;height:100%;border-radius:14px;overflow:hidden;background:oklch(0.08 0.004 270)">
+
+                <div style="position:absolute;left:50%;top:0;transform:translateX(-50%);width:112px;height:19px;border-radius:0 0 9px 9px;background:oklch(0.11 0.002 270);z-index:9"></div>
+
+                <div style="position:absolute;inset:0;opacity:{{ s.bootOp }};background-color:#000;background-image:url('uploads/macos-startup-apple-logo-progress-bar.png');background-repeat:no-repeat;background-position:center;background-size:108% 106%"></div>
+
+                <div style="position:absolute;inset:0;opacity:{{ s.osOp }};background-color:#0b1622;background-image:url('uploads/469f6fe25bc2849f609e6e9880d4be2b.png');background-repeat:no-repeat;background-position:center top;background-size:100% 100%">
+
+                  <div style="position:absolute;left:34px;top:96px;width:360px;border-radius:10px;overflow:hidden;background:oklch(0.14 0.008 280);border:1px solid rgba(255,255,255,.14);box-shadow:0 22px 44px rgba(0,0,0,.5);opacity:{{ s.win2Op }};transform:{{ s.win2Tf }}">
+                    <div style="height:26px;display:flex;align-items:center;gap:7px;padding:0 10px;background:rgba(255,255,255,.07);font-family:'Geist Mono',ui-monospace,monospace;font-size:9px;letter-spacing:.1em;color:rgba(255,255,255,.6)">
+                      <div style="width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.35)"></div>zsh — nasir
+                    </div>
+                    <div style="padding:16px 17px;font-family:'Geist Mono',ui-monospace,monospace;font-size:13px;line-height:1.85;color:rgba(255,255,255,.75)">
+                      <div><span style="color:oklch(0.72 0.13 195)">~</span> whoami</div>
+                      <div style="color:rgba(255,255,255,.95)">front-end developer · baku</div>
+                      <div><span style="color:oklch(0.72 0.13 195)">~</span> ls projects<span style="animation:caretBlink 1.1s step-end infinite">_</span></div>
+                    </div>
+                  </div>
+
+                  <div id="lidwindow" style="position:absolute;left:{{ s.w1L }}px;right:{{ s.w1L }}px;top:{{ s.w1T }}px;bottom:{{ s.w1B }}px;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;background:#f5f5f7;color:oklch(0.21 0.008 280);--w:1;box-shadow:0 34px 68px rgba(0,0,0,.5), inset 0 0 0 1px rgba(0,0,0,.08);opacity:{{ s.win1Op }};transform:{{ s.win1Tf }}">
+                    <div style="height:38px;display:flex;align-items:center;gap:9px;padding:0 14px;background:#e8e8ed;border-bottom:1px solid rgba(0,0,0,.1)">
+                      <div style="width:11px;height:11px;border-radius:50%;background:#ff5f57"></div>
+                      <div style="width:11px;height:11px;border-radius:50%;background:#febc2e"></div>
+                      <div style="width:11px;height:11px;border-radius:50%;background:#28c840"></div>
+                      <span style="margin-left:12px;font-size:12px;color:rgba(0,0,0,.55)">Nasir Mustafayev — Portfolio</span>
+                    </div>
+                    <div style="flex:1;overflow:hidden">
+<div style="max-width:1100px;margin:0 auto;padding:64px 44px 0">
+  <div style="font-size:11px;letter-spacing:.05em;text-transform:uppercase;font-weight:600;color:rgba(0,0,0,.4)">Portfolio</div>
+  <div style="display:flex;align-items:center;gap:26px;margin-top:20px">
+    <img src="uploads/1768086873966.jpg" alt="Nasir Mustafayev" style="flex:none;width:104px;height:104px;border-radius:50%;object-fit:cover;object-position:52% 28%;box-shadow:0 1px 0 rgba(0,0,0,.08), 0 10px 24px rgba(0,0,0,.14)">
+    <div>
+      <div style="font-size:50px;font-weight:600;letter-spacing:-.028em;line-height:1.02">Nasir Mustafayev</div>
+      <div style="margin-top:10px;font-size:19px;font-weight:600;letter-spacing:-.02em;color:rgba(0,0,0,.5)">Front-End Developer / Software Engineer — Baku</div>
+    </div>
+  </div>
+  <p style="margin:24px 0 0;max-width:660px;font-size:15px;line-height:1.65;color:rgba(0,0,0,.72);text-wrap:pretty">Computer Science student at Holberton School with five years of enterprise IT experience. Front ends in React and TypeScript, back-end APIs in Python and Node.js with PostgreSQL.</p>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:22px">
+    <span style="border:1px solid rgba(0,0,0,.16);border-radius:100px;padding:5px 12px;font-size:11px">TypeScript</span>
+    <span style="border:1px solid rgba(0,0,0,.16);border-radius:100px;padding:5px 12px;font-size:11px">React</span>
+    <span style="border:1px solid rgba(0,0,0,.16);border-radius:100px;padding:5px 12px;font-size:11px">Node</span>
+    <span style="border:1px solid rgba(0,0,0,.16);border-radius:100px;padding:5px 12px;font-size:11px">PostgreSQL</span>
+    <span style="border:1px solid rgba(0,0,0,.16);border-radius:100px;padding:5px 12px;font-size:11px">Python</span>
+    <span style="border:1px solid rgba(0,0,0,.16);border-radius:100px;padding:5px 12px;font-size:11px">MongoDB</span>
+    <span style="border:1px solid rgba(0,0,0,.16);border-radius:100px;padding:5px 12px;font-size:11px">SQLite</span>
+  </div>
+  <div style="margin-top:22px;font-size:12.5px;color:rgba(0,0,0,.5)">nasir.mustafayev@gmail.com · github.com/NasirMustafayev</div>
+</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(112deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,0) 42%, rgba(255,255,255,.05) 100%)"></div>
+              </div>
+            </div>
+          </div>
+
+          <div style="position:absolute;left:50%;top:76%;transform:translateX(-50%);width:1180px;height:220px;border-radius:50%;background:radial-gradient(closest-side, rgba(0,0,0,.62), rgba(0,0,0,0) 72%);filter:blur(18px);z-index:-1"></div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div style="position:absolute;inset:0;z-index:8;pointer-events:none;background:#eef2f8;opacity:{{ s.outOp }}"></div>
+    <div style="position:absolute;left:50%;bottom:40px;transform:translateX(-50%);opacity:{{ s.hintOp }};z-index:6"><span style="display:block;font-size:12px;letter-spacing:-.005em;color:rgba(20,26,40,.55);animation:hintDrift 2.6s ease-in-out infinite">Scroll to open</span></div>
+    <div style="position:absolute;left:36px;bottom:36px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:oklch(0.6 0.01 280);z-index:7">{{ s.phase }}</div>
+    <div style="position:absolute;right:36px;bottom:38px;width:170px;height:2px;background:rgba(21,25,42,.14);z-index:7">
+      <div style="height:100%;background:oklch(0.68 0.14 195);width:{{ s.pct }}"></div>
+    </div>
+  </div>
+</section>
+
+<div style="position:fixed;top:0;left:0;right:0;z-index:40;height:30px;display:flex;align-items:center;justify-content:space-between;padding:0 18px;background:rgba(10,14,20,.55);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);color:rgba(255,255,255,.92);font-size:12px;letter-spacing:-.005em">
+  <div style="display:flex;align-items:center;gap:20px">
+    <span style="font-weight:600">Portfolio</span>
+    <span style="opacity:.75">File</span>
+    <span style="opacity:.75">Work</span>
+    <span style="opacity:.75">About</span>
+    <span style="opacity:.75">Contact</span>
+  </div>
+  <div style="display:flex;align-items:center;gap:16px">
+    <button type="button" onClick="{{ toggleMusic }}" style="appearance:none;border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.08);color:rgba(255,255,255,.9);font:inherit;font-size:11.5px;letter-spacing:-.005em;padding:2px 10px;border-radius:100px;cursor:pointer" style-hover="background:rgba(255,255,255,.18)">♪ {{ music }}</button>
+    <span style="opacity:.75">Baku</span>
+    <span style="opacity:.75">Available for work</span>
+  </div>
+</div>
+
+<div style="position:fixed;top:44px;left:26px;right:26px;bottom:70px;z-index:20;display:flex;flex-direction:column;border-radius:12px;overflow:hidden;background:#f5f5f7;color:#1d1d1f;box-shadow:0 40px 90px rgba(0,0,0,.5), inset 0 0 0 1px rgba(0,0,0,.08)">
+  <div style="flex:none;height:38px;display:flex;align-items:center;gap:9px;padding:0 14px;background:#e8e8ed;border-bottom:1px solid rgba(0,0,0,.1)">
+    <div style="width:11px;height:11px;border-radius:50%;background:#ff5f57"></div>
+    <div style="width:11px;height:11px;border-radius:50%;background:#febc2e"></div>
+    <div style="width:11px;height:11px;border-radius:50%;background:#28c840"></div>
+    <span style="margin-left:12px;font-size:12px;color:rgba(0,0,0,.55)">Nasir Mustafayev — Portfolio</span>
+  </div>
+  <div id="scroller" style="flex:1;min-height:0;overflow-y:auto;overflow-x:hidden">
+    <div id="revealspacer" style="height:660vh"></div>
+    <div style="max-width:1100px;margin:0 auto;padding:64px 44px 0">
+  <div style="font-size:11px;letter-spacing:.05em;text-transform:uppercase;font-weight:600;color:rgba(0,0,0,.4)">Portfolio</div>
+  <div style="display:flex;align-items:center;gap:26px;margin-top:20px">
+    <img src="uploads/1768086873966.jpg" alt="Nasir Mustafayev" style="flex:none;width:104px;height:104px;border-radius:50%;object-fit:cover;object-position:52% 28%;box-shadow:0 1px 0 rgba(0,0,0,.08), 0 10px 24px rgba(0,0,0,.14)">
+    <div>
+      <div style="font-size:50px;font-weight:600;letter-spacing:-.028em;line-height:1.02">Nasir Mustafayev</div>
+      <div style="margin-top:10px;font-size:19px;font-weight:600;letter-spacing:-.02em;color:rgba(0,0,0,.5)">Front-End Developer / Software Engineer — Baku</div>
+    </div>
+  </div>
+  <p style="margin:24px 0 0;max-width:660px;font-size:15px;line-height:1.65;color:rgba(0,0,0,.72);text-wrap:pretty">Computer Science student at Holberton School with five years of enterprise IT experience. Front ends in React and TypeScript, back-end APIs in Python and Node.js with PostgreSQL.</p>
+  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:22px">
+    <span style="border:1px solid rgba(0,0,0,.16);border-radius:100px;padding:5px 12px;font-size:11px">TypeScript</span>
+    <span style="border:1px solid rgba(0,0,0,.16);border-radius:100px;padding:5px 12px;font-size:11px">React</span>
+    <span style="border:1px solid rgba(0,0,0,.16);border-radius:100px;padding:5px 12px;font-size:11px">Node</span>
+    <span style="border:1px solid rgba(0,0,0,.16);border-radius:100px;padding:5px 12px;font-size:11px">PostgreSQL</span>
+    <span style="border:1px solid rgba(0,0,0,.16);border-radius:100px;padding:5px 12px;font-size:11px">Python</span>
+    <span style="border:1px solid rgba(0,0,0,.16);border-radius:100px;padding:5px 12px;font-size:11px">MongoDB</span>
+    <span style="border:1px solid rgba(0,0,0,.16);border-radius:100px;padding:5px 12px;font-size:11px">SQLite</span>
+  </div>
+  <div style="margin-top:22px;font-size:12.5px;color:rgba(0,0,0,.5)">nasir.mustafayev@gmail.com · github.com/NasirMustafayev</div>
+</div>
+    <div style="max-width:1100px;margin:0 auto;padding:96px 44px 110px">
+
+    <div style="display:flex;justify-content:space-between;align-items:baseline;padding-bottom:18px;border-bottom:1px solid rgba(0,0,0,.16)">
+      <h2 style="margin:0;font-size:48px;font-weight:600;letter-spacing:-.026em">Selected work</h2>
+      <span style="font-size:12px;letter-spacing:-.005em;color:rgba(0,0,0,.45)">Six projects · three previews</span>
+    </div>
+
+    <div style="display:grid;gap:56px;margin-top:44px">
+      <div style="display:grid;grid-template-columns:1.15fr 1fr;gap:40px;align-items:center">
+        <div style="grid-column:1;grid-row:1;aspect-ratio:16/10;border-radius:14px;overflow:hidden;background:#eef1f6;box-shadow:0 1px 2px rgba(0,0,0,.07), 0 14px 34px rgba(0,0,0,.09)">
+          <img src="uploads/Screenshot 2026-08-25 at 17.39.09.png" alt="AzXərclə screenshot" style="display:block;width:100%;height:100%;object-fit:cover;object-position:left top">
+        </div>
+        <div style="grid-column:2;grid-row:1;display:grid;gap:12px;align-content:center">
+          <div style="font-size:11px;letter-spacing:.03em;text-transform:uppercase;font-weight:600;color:rgba(0,0,0,.4)">React · Flask · OCR</div>
+          <div style="font-weight:600;letter-spacing:-.024em;font-size:26px;line-height:1.1">AzXərclə</div>
+          <p style="margin:0;font-size:14px;line-height:1.62;color:rgba(0,0,0,.72);text-wrap:pretty">Reads Azerbaijani e-kassa receipts from a photo, the device camera or the receipt QR code, extracts line items with OCR, and builds a per-store price history for comparing prices across shops.</p>
+          <a href="https://github.com/NasirMustafayev/AzXercle" target="_blank" rel="noopener" style="justify-self:start;display:inline-flex;align-items:center;gap:6px;font-size:12.5px;color:#0066cc;text-decoration:none">GitHub<span style="font-size:13px">↗</span></a>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1.15fr;gap:40px;align-items:center">
+        <div style="grid-column:2;grid-row:1;aspect-ratio:16/10;border-radius:14px;overflow:hidden;background:#eef1f6;box-shadow:0 1px 2px rgba(0,0,0,.07), 0 14px 34px rgba(0,0,0,.09)">
+          <img src="uploads/Screenshot 2026-08-25 at 17.37.12.png" alt="HRIM screenshot" style="display:block;width:100%;height:100%;object-fit:cover;object-position:left top">
+        </div>
+        <div style="grid-column:1;grid-row:1;display:grid;gap:12px;align-content:center">
+          <div style="font-size:11px;letter-spacing:.03em;text-transform:uppercase;font-weight:600;color:rgba(0,0,0,.4)">TS · Node · PostgreSQL</div>
+          <div style="font-weight:600;letter-spacing:-.024em;font-size:26px;line-height:1.1">HRIM</div>
+          <p style="margin:0;font-size:14px;line-height:1.62;color:rgba(0,0,0,.72);text-wrap:pretty">One system for a company's HR processes: employee records, payroll and timesheets, a public job listing and application page, and a PWA for clocking in and out.</p>
+          <div style="display:flex;flex-wrap:wrap;align-items:center;gap:18px">
+            <a href="https://hrimaz.up.railway.app/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;font-size:12.5px;color:#0066cc;text-decoration:none">Live demo<span style="font-size:13px">↗</span></a>
+            <a href="https://github.com/NasirMustafayev/hrim" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;font-size:12.5px;color:#0066cc;text-decoration:none">GitHub<span style="font-size:13px">↗</span></a>
+          </div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1.15fr 1fr;gap:40px;align-items:center">
+        <div style="grid-column:1;grid-row:1;aspect-ratio:16/10;border-radius:14px;overflow:hidden;background:#eef1f6;box-shadow:0 1px 2px rgba(0,0,0,.07), 0 14px 34px rgba(0,0,0,.09)">
+          <img src="uploads/Screenshot 2026-08-25 at 18.11.23.png" alt="MoviesDB screenshot" style="display:block;width:100%;height:100%;object-fit:cover;object-position:left top">
+        </div>
+        <div style="grid-column:2;grid-row:1;display:grid;gap:12px;align-content:center">
+          <div style="font-size:11px;letter-spacing:.03em;text-transform:uppercase;font-weight:600;color:rgba(0,0,0,.4)">TS · Material UI</div>
+          <div style="font-weight:600;letter-spacing:-.024em;font-size:26px;line-height:1.1">MoviesDB</div>
+          <p style="margin:0;font-size:14px;line-height:1.62;color:rgba(0,0,0,.72);text-wrap:pretty">Front-end app pulling the latest films from a public API, with user accounts, a favourites list, and rendering optimisations for fast load and search.</p>
+          <a href="https://github.com/NasirMustafayev/Practice1_MoviesDB" target="_blank" rel="noopener" style="justify-self:start;display:inline-flex;align-items:center;gap:6px;font-size:12.5px;color:#0066cc;text-decoration:none">GitHub<span style="font-size:13px">↗</span></a>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:0 52px;margin-top:52px;border-top:1px solid rgba(0,0,0,.12)">
+      <div style="padding:22px 0;border-bottom:1px solid rgba(0,0,0,.12);display:grid;gap:9px;align-content:start">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px"><span style="font-weight:600;letter-spacing:-.022em;font-size:18px">CVPilot</span><span style="font-size:9px;letter-spacing:.04em;text-transform:uppercase;font-weight:500;color:rgba(0,0,0,.42)">FastAPI · JWT</span></div>
+        <p style="margin:0;font-size:13.5px;line-height:1.6;color:rgba(0,0,0,.7);text-wrap:pretty">Separate HR and candidate workspaces for uploading a CV, scoring it against job requirements, and reloading saved analyses behind JWT-authenticated API routes.</p>
+        <a href="https://github.com/NasirMustafayev/CVPilot" target="_blank" rel="noopener" style="justify-self:start;display:inline-flex;align-items:center;gap:6px;font-size:12px;color:#0066cc;text-decoration:none">GitHub<span style="font-size:13px">↗</span></a>
+      </div>
+      <div style="padding:22px 0;border-bottom:1px solid rgba(0,0,0,.12);display:grid;gap:9px;align-content:start">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px"><span style="font-weight:600;letter-spacing:-.022em;font-size:18px">Tapis</span><span style="font-size:9px;letter-spacing:.04em;text-transform:uppercase;font-weight:500;color:rgba(0,0,0,.42)">Prisma · Socket.IO</span></div>
+        <p style="margin:0;font-size:13.5px;line-height:1.6;color:rgba(0,0,0,.7);text-wrap:pretty">Swipe-based matching with real-time chat and JWT auth; containerised with Docker Compose, deployed on Railway, localised in Azerbaijani and English.</p>
+        <a href="https://github.com/NasirMustafayev/Tapis-prototype" target="_blank" rel="noopener" style="justify-self:start;display:inline-flex;align-items:center;gap:6px;font-size:12px;color:#0066cc;text-decoration:none">GitHub<span style="font-size:13px">↗</span></a>
+      </div>
+      <div style="padding:22px 0;border-bottom:1px solid rgba(0,0,0,.12);display:grid;gap:9px;align-content:start">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px"><span style="font-weight:600;letter-spacing:-.022em;font-size:18px">E-Commerce Store</span><span style="font-size:9px;letter-spacing:.04em;text-transform:uppercase;font-weight:500;color:rgba(0,0,0,.42)">PHP · MySQL</span></div>
+        <p style="margin:0;font-size:13.5px;line-height:1.6;color:rgba(0,0,0,.7);text-wrap:pretty">Complete storefront — catalogue, search, cart, checkout, order history and user accounts — plus an admin panel for managing products and orders.</p>
+        <a href="https://github.com/NasirMustafayev/eticaret" target="_blank" rel="noopener" style="justify-self:start;display:inline-flex;align-items:center;gap:6px;font-size:12px;color:#0066cc;text-decoration:none">GitHub<span style="font-size:13px">↗</span></a>
+      </div>
+    </div>
+
+    <p style="margin:22px 0 0;font-size:12px;line-height:1.6;color:rgba(0,0,0,.5);max-width:660px">AI coding assistants were part of my workflow on AzXərclə, HRIM, CVPilot and Tapis. MoviesDB and the e-commerce store were written entirely by hand.</p>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:52px;margin-top:76px;padding-top:34px;border-top:1px solid rgba(0,0,0,.16)">
+      <div>
+        <div style="font-size:10px;letter-spacing:.055em;text-transform:uppercase;font-weight:600;color:rgba(0,0,0,.42)">About</div>
+        <p style="margin:16px 0 0;font-size:24px;font-weight:600;line-height:1.32;letter-spacing:-.022em;text-wrap:pretty">Computer Science student at Holberton School with five years of enterprise IT experience.</p>
+        <p style="margin:16px 0 0;font-size:14px;line-height:1.65;color:rgba(0,0,0,.7);text-wrap:pretty">I have built web applications end to end — front ends in React and TypeScript, back-end APIs in Python and Node.js with PostgreSQL — alongside a practical grounding in Linux, networking and production systems. Open to front-end, back-end or systems work; I am looking for a team I can learn from while I develop depth in one of them.</p>
+        <div style="display:grid;gap:10px;margin-top:26px">
+          <div style="display:grid;grid-template-columns:96px 1fr;gap:14px;font-size:13px;line-height:1.6"><span style="letter-spacing:.03em;text-transform:uppercase;font-size:9.5px;font-weight:600;color:rgba(0,0,0,.42);padding-top:3px">Proficient</span><span style="color:rgba(0,0,0,.75)">JavaScript, TypeScript, React, HTML/CSS, Git, MySQL, PostgreSQL, SQLite</span></div>
+          <div style="display:grid;grid-template-columns:96px 1fr;gap:14px;font-size:13px;line-height:1.6"><span style="letter-spacing:.03em;text-transform:uppercase;font-size:9.5px;font-weight:600;color:rgba(0,0,0,.42);padding-top:3px">Working</span><span style="color:rgba(0,0,0,.75)">Python (FastAPI, Flask), Node.js/Express, C, Bash, MongoDB, Docker, PHP, REST API design</span></div>
+          <div style="display:grid;grid-template-columns:96px 1fr;gap:14px;font-size:13px;line-height:1.6"><span style="letter-spacing:.03em;text-transform:uppercase;font-size:9.5px;font-weight:600;color:rgba(0,0,0,.42);padding-top:3px">Systems</span><span style="color:rgba(0,0,0,.75)">Linux, Windows Server, networking fundamentals, ERP administration</span></div>
+          <div style="display:grid;grid-template-columns:96px 1fr;gap:14px;font-size:13px;line-height:1.6"><span style="letter-spacing:.03em;text-transform:uppercase;font-size:9.5px;font-weight:600;color:rgba(0,0,0,.42);padding-top:3px">Languages</span><span style="color:rgba(0,0,0,.75)">Azerbaijani (native) · Turkish (full professional) · English (professional)</span></div>
+        </div>
+      </div>
+
+      <div>
+        <div style="font-size:10px;letter-spacing:.055em;text-transform:uppercase;font-weight:600;color:rgba(0,0,0,.42)">Experience</div>
+        <div style="display:grid;gap:0;margin-top:16px">
+          <div style="display:grid;grid-template-columns:80px 1fr;gap:18px;padding:15px 0;border-top:1px solid rgba(0,0,0,.12)">
+            <span style="font-size:12px;color:rgba(0,0,0,.45);padding-top:5px">2021 —</span>
+            <div><div style="font-size:15px;font-weight:600;letter-spacing:-.015em">IT Specialist — Idea LLC Baku</div><p style="margin:6px 0 0;font-size:13.5px;line-height:1.6;color:rgba(0,0,0,.7);text-wrap:pretty">Maintain the company's IT infrastructure — servers, networks and workstations. Administer and monitor ERP systems, act as the main technical point of contact for staff, and own IT procurement and vendor relationships.</p></div>
+          </div>
+          <div style="display:grid;grid-template-columns:80px 1fr;gap:18px;padding:15px 0;border-top:1px solid rgba(0,0,0,.12)">
+            <span style="font-size:12px;color:rgba(0,0,0,.45);padding-top:5px">2025 — 26</span>
+            <div><div style="font-size:15px;font-weight:600;letter-spacing:-.015em">Holberton School Azerbaijan — Computer Science</div><p style="margin:6px 0 0;font-size:13.5px;line-height:1.6;color:rgba(0,0,0,.7)">C and shell, data structures and algorithms, system design, and full-stack web development with Python, Flask, JavaScript and React.</p></div>
+          </div>
+          <div style="display:grid;grid-template-columns:80px 1fr;gap:18px;padding:15px 0;border-top:1px solid rgba(0,0,0,.12)">
+            <span style="font-size:12px;color:rgba(0,0,0,.45);padding-top:5px">2026</span>
+            <div><div style="font-size:15px;font-weight:600;letter-spacing:-.015em">Andersen — Software Engineering Internship</div><p style="margin:6px 0 0;font-size:13.5px;line-height:1.6;color:rgba(0,0,0,.7)">Passed the technical interview process and received an offer for the internship programme.</p></div>
+          </div>
+          <div style="display:grid;grid-template-columns:80px 1fr;gap:18px;padding:15px 0;border-top:1px solid rgba(0,0,0,.12)">
+            <span style="font-size:12px;color:rgba(0,0,0,.45);padding-top:5px">2023</span>
+            <div><div style="font-size:15px;font-weight:600;letter-spacing:-.015em">EPAM / Upskill — StrategEast IT Hub</div><p style="margin:6px 0 0;font-size:13.5px;line-height:1.6;color:rgba(0,0,0,.7)">Front-End Development — HTML, CSS, JavaScript.</p></div>
+          </div>
+          <div style="display:grid;grid-template-columns:80px 1fr;gap:18px;padding:15px 0;border-top:1px solid rgba(0,0,0,.12);border-bottom:1px solid rgba(0,0,0,.12)">
+            <span style="font-size:12px;color:rgba(0,0,0,.45);padding-top:5px">2016 — 20</span>
+            <div><div style="font-size:15px;font-weight:600;letter-spacing:-.015em">Lankaran State University</div><p style="margin:6px 0 0;font-size:13.5px;line-height:1.6;color:rgba(0,0,0,.7)">B.Sc. Accounting and Auditing.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:76px;padding:38px 0 0;border-top:1px solid rgba(0,0,0,.16);display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap">
+      <div>
+        <div style="font-size:10px;letter-spacing:.055em;text-transform:uppercase;font-weight:600;color:rgba(0,0,0,.42)">Contact</div>
+        <p style="margin:14px 0 0;font-weight:600;letter-spacing:-.022em;font-size:30px;line-height:1.2">nasir.mustafayev@gmail.com</p>
+        <div style="display:flex;gap:22px;margin-top:20px;font-size:11px;letter-spacing:.05em">
+          <a href="https://github.com/NasirMustafayev" style="color:#0066cc">github.com/NasirMustafayev</a>
+          <a href="https://linkedin.com/in/nasirmustafayev" style="color:#0066cc">linkedin.com/in/nasirmustafayev</a>
+        </div>
+      </div>
+      <div style="text-align:right;font-size:11px;line-height:1.9;color:rgba(0,0,0,.6)">Baku, Azerbaijan<br>+994 51 645 84 88</div>
+    </div>
+    </div>
+  </div>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;cameraTilt&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:76,&quot;min&quot;:40,&quot;max&quot;:80,&quot;step&quot;:1,&quot;unit&quot;:&quot;deg&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Reveal&quot;},&quot;lidAngle&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:108,&quot;min&quot;:95,&quot;max&quot;:120,&quot;step&quot;:1,&quot;unit&quot;:&quot;deg&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Reveal&quot;}}">
+const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+const seg = (p, a, b) => clamp((p - a) / (b - a), 0, 1);
+const ease = t => t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+const lerp = (a, b, t) => a + (b - a) * t;
+// Events we try to start audio on. Only some of these count as a user
+// activation (pointer/mouse/touchend/key); wheel and touchmove are here because
+// they are the gesture we actually want, and they do work where the browser has
+// already allowed the site to play sound.
+const UNLOCK_EVENTS = ['wheel', 'touchstart', 'touchmove', 'touchend', 'pointerdown', 'pointerup', 'mousedown', 'mouseup', 'click', 'keydown', 'keyup'];
+
+class Component extends DCLogic {
+  state = { p: 0, music: false, needsTap: false, vh: typeof window !== 'undefined' ? window.innerHeight : 800, vw: typeof window !== 'undefined' ? window.innerWidth : 1280 };
+
+  componentDidMount() {
+    this.onScroll = () => {
+      const sc = document.getElementById('scroller');
+      const sp = document.getElementById('revealspacer');
+      if (!sc || !sp) return;
+      const span = sp.offsetHeight - sc.clientHeight;
+      const p = span <= 0 ? 1 : clamp(sc.scrollTop / span, 0, 1);
+      // sound tracks raw pixels, so detents keep firing past the reveal section
+      this.scrollSound(p, this.state.p, sc.scrollTop);
+      if (p !== this.state.p || window.innerHeight !== this.state.vh || window.innerWidth !== this.state.vw) this.setState({ p: p, vh: window.innerHeight, vw: window.innerWidth });
+    };
+    // the first scroll turns sound on. wheel/scroll are not user-activation events
+    // in Chrome or Safari, so we listen for everything that is as well — whichever
+    // arrives first unlocks. On touch the scroll's own touchend is the activation,
+    // so there a swipe really is enough; on a desktop trackpad it takes a click.
+    this.armSound = () => this.tryUnlock();
+    this.onVis = () => { if (!document.hidden) this.tryUnlock(); };
+    document.addEventListener('visibilitychange', this.onVis);
+    this.armListen(true);
+    this.bindUiSounds();
+    document.addEventListener('scroll', this.onScroll, true);
+    window.addEventListener('resize', this.onScroll);
+
+    const sc = () => document.getElementById('scroller');
+    this.onWheel = e => {
+      const s = sc();
+      if (!s || s.contains(e.target)) return;
+      s.scrollTop += e.deltaMode === 1 ? e.deltaY * 16 : e.deltaY;
+      e.preventDefault();
+    };
+    this.onTouchStart = e => { this.ty = e.touches[0].clientY; };
+    this.onTouchMove = e => {
+      const s = sc();
+      if (!s || s.contains(e.target)) return;
+      const y = e.touches[0].clientY;
+      s.scrollTop += this.ty - y;
+      this.ty = y;
+      e.preventDefault();
+    };
+    this.onKey = e => {
+      const s = sc();
+      if (!s) return;
+      const step = { ArrowDown: 90, ArrowUp: -90, PageDown: s.clientHeight * 0.9, PageUp: -s.clientHeight * 0.9, ' ': s.clientHeight * 0.9, Home: -1e7, End: 1e7 }[e.key];
+      if (step === undefined) return;
+      s.scrollTop += step;
+      e.preventDefault();
+    };
+    window.addEventListener('wheel', this.onWheel, { passive: false });
+    window.addEventListener('touchstart', this.onTouchStart, { passive: true });
+    window.addEventListener('touchmove', this.onTouchMove, { passive: false });
+    window.addEventListener('keydown', this.onKey);
+
+    const s0 = sc();
+    if (s0) { s0.setAttribute('tabindex', '-1'); s0.style.outline = 'none'; s0.focus({ preventScroll: true }); }
+    this.onScroll();
+  }
+
+  measureFitUnused() {
+    const sn = document.getElementById('lidinner');
+    const wn = document.getElementById('lidwindow');
+    if (!sn || !wn || !sn.offsetWidth || !sn.offsetHeight) return;
+    const r = sn.getBoundingClientRect();
+    const kx = r.width / sn.offsetWidth, ky = r.height / sn.offsetHeight;
+    if (kx < 0.2 || ky < 0.2) return;
+    const vh = window.innerHeight;
+    const f = this.state.fit || { l: (26 - r.left) / kx, t: (r.bottom - (vh - 70)) / ky, b: (44 - r.top) / ky };
+    // perspective makes the mapping non-affine, so correct on the window's own rect
+    // until the residual settles (local Y is flipped by the panel's rotateX(180deg))
+    const wr = wn.getBoundingClientRect();
+    const el = 26 - wr.left, et = 44 - wr.top, eb = (vh - 70) - wr.bottom;
+    if (Math.abs(el) < 0.6 && Math.abs(et) < 0.6 && Math.abs(eb) < 0.6) { this.iter = 0; return; }
+    this.iter = (this.iter || 0) + 1;
+    if (this.iter > 12) return;
+    const g = 0.5, cl = v => Math.max(-40, Math.min(660, v));
+    this.setState({ fit: {
+      l: cl(f.l + g * el / kx),
+      t: cl(f.t - g * eb / ky),
+      b: cl(f.b - g * et / ky)
+    } });
+  }
+
+  // --- audio: one context, a drifting drone bed, plus scroll + UI sounds ---
+  audio() {
+    if (this.ac) return this.ac;
+    const AC = window.AudioContext || window.webkitAudioContext;
+    if (!AC) return null;
+    const ac = this.ac = new AC();
+    ac.onstatechange = () => this.onAcState();
+    // shared bus: gentle low-pass, a little stereo delay for air
+    const master = ac.createGain();
+    master.gain.value = 0.9;
+    const air = ac.createBiquadFilter();
+    air.type = 'lowpass';
+    air.frequency.value = 5200;
+    const dl = ac.createDelay(0.6);
+    dl.delayTime.value = 0.09;
+    const fb = ac.createGain();
+    fb.gain.value = 0.12;
+    const wet = ac.createGain();
+    wet.gain.value = 0.07;
+    master.connect(air).connect(ac.destination);
+    master.connect(dl);
+    dl.connect(fb).connect(dl);
+    dl.connect(wet).connect(ac.destination);
+    this.bus = master;
+    // one noise buffer reused by pad and ticks
+    const n = ac.createBuffer(1, ac.sampleRate * 2, ac.sampleRate);
+    const d = n.getChannelData(0);
+    for (let i = 0; i < d.length; i++) d[i] = (Math.random() * 2 - 1) * 0.6;
+    this.noise = n;
+    return ac;
+  }
+
+  // attach/detach the unlock listeners as one set
+  armListen(on) {
+    if (this.armed === on) return;
+    this.armed = on;
+    const f = on ? 'addEventListener' : 'removeEventListener';
+    const opt = { capture: true, passive: true };
+    UNLOCK_EVENTS.forEach(t => window[f](t, this.armSound, opt));
+    // the inner scroller's scroll doesn't reach window — catch it on the way down
+    document[f]('scroll', this.armSound, opt);
+  }
+
+  // one attempt at starting audio. Success is checked against ac.state rather
+  // than assumed: outside a user activation resume() still resolves, it just
+  // leaves the context suspended, which is how the button used to claim sound
+  // was on while nothing played.
+  tryUnlock() {
+    if (this.state.music || this.userMuted || this.unlockPending) return;
+    const ac = this.audio();
+    if (!ac) { this.armListen(false); return; }
+    const done = () => {
+      this.unlockPending = false;
+      if (ac.state === 'running') {
+        this.armListen(false);
+        this.setState({ music: true, needsTap: false });
+      } else if (!this.state.needsTap) {
+        this.setState({ needsTap: true });   // the label asks for the click we need
+      }
+    };
+    if (ac.state === 'running') return done();
+    this.unlockPending = true;
+    // silent one-frame buffer: the primer Safari/iOS want alongside resume()
+    try {
+      const s = ac.createBufferSource();
+      s.buffer = ac.createBuffer(1, 1, ac.sampleRate);
+      s.connect(ac.destination);
+      s.start(0);
+    } catch (e) {}
+    const r = ac.resume();
+    if (r && r.then) r.then(done, done); else done();
+  }
+
+  // Safari suspends the context on interruptions and any browser may suspend a
+  // backgrounded tab — fall back to armed so the next gesture picks sound up
+  // again instead of leaving a dead "Sound on".
+  onAcState() {
+    const ac = this.ac;
+    if (!ac) return;
+    if (ac.state === 'running') {
+      if (!this.state.music && !this.userMuted) {
+        this.armListen(false);
+        this.setState({ music: true, needsTap: false });
+      }
+    } else if (this.state.music) {
+      this.setState({ music: false });
+      if (!this.userMuted) this.armListen(true);
+    }
+  }
+
+  // sound on/off — no music bed, just the mechanical sounds
+  toggleMusic() {
+    if (this.state.music) {
+      this.stopHinge();
+      this.userMuted = true;            // an explicit mute stays muted; don't re-arm on scroll
+      this.armListen(false);
+      this.setState({ music: false, needsTap: false });
+      return;
+    }
+    this.userMuted = false;
+    this.tryUnlock();                   // this one always comes from a click, so it lands
+  }
+
+  // continuous hinge friction while the lid is swinging
+  hinge(vel, angle) {
+    const ac = this.ac;
+    if (!ac) return;
+    if (!this.hg) {
+      const s = ac.createBufferSource();
+      s.buffer = this.noise;
+      s.loop = true;
+      const bp = ac.createBiquadFilter();
+      bp.type = 'bandpass';
+      bp.frequency.value = 700;
+      bp.Q.value = 4.5;
+      const lo = ac.createBiquadFilter();
+      lo.type = 'lowpass';
+      lo.frequency.value = 2400;
+      const g = ac.createGain();
+      g.gain.value = 0;
+      s.connect(bp).connect(lo).connect(g).connect(this.bus);
+      s.start();
+      this.hg = { s: s, g: g, bp: bp };
+    }
+    const t = ac.currentTime;
+    this.hg.g.gain.setTargetAtTime(Math.min(0.09, vel * 2.6), t, 0.06);
+    this.hg.bp.frequency.setTargetAtTime(420 + angle * 900, t, 0.12);
+  }
+
+  stopHinge() {
+    if (!this.hg || !this.ac) return;
+    this.hg.g.gain.setTargetAtTime(0, this.ac.currentTime, 0.08);
+  }
+
+  // aluminium lid pop: magnet release / seat — tight click, wood-block body, no boom
+  pop(kind, level) {
+    const ac = this.ac;
+    if (!ac || !this.state.music) return;
+    const t = ac.currentTime;
+    const lv = level == null ? 1 : level;
+    const open = kind === 'open';
+    // transient: brief filtered noise slap
+    const s = ac.createBufferSource();
+    s.buffer = this.noise;
+    s.playbackRate.value = 1 + Math.random() * 0.2;
+    const bp = ac.createBiquadFilter();
+    bp.type = 'bandpass';
+    bp.frequency.setValueAtTime(open ? 2400 : 1500, t);
+    bp.frequency.exponentialRampToValueAtTime(open ? 900 : 520, t + 0.05);
+    bp.Q.value = 0.9;
+    const ng = ac.createGain();
+    ng.gain.setValueAtTime(0.09 * lv, t);
+    ng.gain.exponentialRampToValueAtTime(0.0001, t + 0.05);
+    s.connect(bp).connect(ng).connect(this.bus);
+    s.start(t, Math.random());
+    s.stop(t + 0.09);
+    // body: two short damped partials, mid-range so it reads as a case, not a drum
+    [[open ? 520 : 340, 0.055 * lv, 0.075], [open ? 880 : 610, 0.03 * lv, 0.045]].forEach(v => {
+      const o = ac.createOscillator(), g = ac.createGain();
+      o.type = 'triangle';
+      o.frequency.setValueAtTime(v[0], t);
+      o.frequency.exponentialRampToValueAtTime(v[0] * 0.82, t + v[2]);
+      g.gain.setValueAtTime(v[1], t);
+      g.gain.exponentialRampToValueAtTime(0.0001, t + v[2]);
+      o.connect(g).connect(this.bus);
+      o.start(t);
+      o.stop(t + v[2] + 0.02);
+    });
+  }
+
+  // short bell-ish blip; used for scroll ticks and UI
+  blip(freq, level, dur, type) {
+    const ac = this.ac;
+    if (!ac || !this.state.music) return;
+    const t = ac.currentTime;
+    const o = ac.createOscillator(), g = ac.createGain();
+    o.type = type || 'sine';
+    o.frequency.setValueAtTime(freq, t);
+    g.gain.setValueAtTime(0, t);
+    g.gain.linearRampToValueAtTime(level, t + 0.008);
+    g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+    o.connect(g).connect(this.bus);
+    o.start(t);
+    o.stop(t + dur + 0.02);
+  }
+
+  // filtered noise puff — scroll texture
+  puff(level, freq, dur) {
+    const ac = this.ac;
+    if (!ac || !this.state.music || !this.noise) return;
+    const t = ac.currentTime;
+    const s = ac.createBufferSource();
+    s.buffer = this.noise;
+    s.playbackRate.value = 0.8 + Math.random() * 0.4;
+    const f = ac.createBiquadFilter();
+    f.type = 'bandpass';
+    f.frequency.setValueAtTime(freq, t);
+    f.frequency.exponentialRampToValueAtTime(freq * 1.7, t + dur);
+    f.Q.value = 1.1;
+    const g = ac.createGain();
+    g.gain.setValueAtTime(0, t);
+    g.gain.linearRampToValueAtTime(level, t + 0.02);
+    g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+    s.connect(f).connect(g).connect(this.bus);
+    s.start(t);
+    s.stop(t + dur + 0.05);
+  }
+
+  // trackpad feel: fingertip friction on glass + hinge while the lid moves
+  scrollSound(p, prev, top) {
+    if (!this.state.music || !this.ac) return;
+    const ac = this.ac;
+    const now = ac.currentTime;
+    const px = Math.abs(top - (this.lastTop == null ? top : this.lastTop));
+    this.lastTop = top;
+    const dp = Math.abs(p - prev);
+    if (!px && !dp) return;
+    const vel = (px / 900) / Math.max(0.008, now - (this.lastScrollT || now - 0.016));
+    this.lastScrollT = now;
+
+    // lid swings between p 0.08 and 0.46 — hinge friction tracks it
+    if (p > 0.06 && p < 0.5) {
+      this.hinge(Math.min(0.05, vel * 0.6), seg(p, 0.08, 0.46));
+      clearTimeout(this.hgOff);
+      this.hgOff = setTimeout(() => this.stopHinge(), 90);
+      if (prev <= 0.085 && p > 0.085) this.pop('open', 1);           // magnet lets go
+      if (prev >= 0.085 && p < 0.085) this.pop('close', 1.1);        // lid seats shut
+    } else {
+      this.stopHinge();
+      if (prev < 0.46 && p >= 0.46) this.pop('open', 0.75);          // lid reaches its stop
+    }
+
+    // machined scroll detents: low-mid, damped, spaced — not a click track
+    this.scrollAcc = (this.scrollAcc || 0) + px / 900;
+    if (this.scrollAcc > 0.012 && now - (this.lastGrain || 0) > 0.055) {
+      this.scrollAcc = 0;
+      this.lastGrain = now;
+      this.detent(Math.min(0.06, 0.02 + vel * 0.2));
+    }
+  }
+
+  // one wheel detent: soft low-mid thump with a trace of metal, quickly damped
+  detent(level) {
+    const ac = this.ac;
+    if (!ac) return;
+    const t = ac.currentTime;
+    const o = ac.createOscillator(), g = ac.createGain();
+    o.type = 'sine';
+    o.frequency.setValueAtTime(210 + Math.random() * 30, t);
+    o.frequency.exponentialRampToValueAtTime(120, t + 0.06);
+    g.gain.setValueAtTime(level, t);
+    g.gain.exponentialRampToValueAtTime(0.0001, t + 0.07);
+    o.connect(g).connect(this.bus);
+    o.start(t);
+    o.stop(t + 0.09);
+    const s = ac.createBufferSource();
+    s.buffer = this.noise;
+    s.playbackRate.value = 0.8 + Math.random() * 0.3;
+    const bp = ac.createBiquadFilter();
+    bp.type = 'bandpass';
+    bp.frequency.value = 480 + Math.random() * 160;
+    bp.Q.value = 2.2;
+    const ng = ac.createGain();
+    ng.gain.setValueAtTime(level * 0.5, t);
+    ng.gain.exponentialRampToValueAtTime(0.0001, t + 0.03);
+    s.connect(bp).connect(ng).connect(this.bus);
+    s.start(t, Math.random());
+    s.stop(t + 0.05);
+  }
+
+  // very short high-passed noise burst: one grain of trackpad friction
+  grain(level) {
+    const ac = this.ac;
+    if (!ac || !this.noise) return;
+    const t = ac.currentTime;
+    const s = ac.createBufferSource();
+    s.buffer = this.noise;
+    s.playbackRate.value = 0.9 + Math.random() * 0.5;
+    const hp = ac.createBiquadFilter();
+    hp.type = 'highpass';
+    hp.frequency.value = 2600 + Math.random() * 1800;
+    const g = ac.createGain();
+    g.gain.setValueAtTime(level, t);
+    g.gain.exponentialRampToValueAtTime(0.0001, t + 0.035);
+    s.connect(hp).connect(g).connect(this.bus);
+    s.start(t, Math.random() * 1.5);
+    s.stop(t + 0.06);
+  }
+
+  bindUiSounds() {
+    const hit = e => e.target.closest && e.target.closest('a,button,[role="button"]');
+    // trackpad click: a crisp mechanical tick, not a tone
+    this.onUiDown = e => { if (hit(e)) { this.detent(0.05); } };
+    this.onUiOver = e => {
+      const el = hit(e);
+      if (!el || el === this.lastHover) return;
+      this.lastHover = el;
+      this.grain(0.016);
+    };
+    this.onUiOut = e => { if (hit(e) === this.lastHover) this.lastHover = null; };
+    document.addEventListener('pointerdown', this.onUiDown, true);
+    document.addEventListener('pointerover', this.onUiOver, true);
+    document.addEventListener('pointerout', this.onUiOut, true);
+  }
+
+  componentWillUnmount() {
+    this.armListen(false);
+    document.removeEventListener('visibilitychange', this.onVis);
+    document.removeEventListener('pointerdown', this.onUiDown, true);
+    document.removeEventListener('pointerover', this.onUiOver, true);
+    document.removeEventListener('pointerout', this.onUiOut, true);
+    clearInterval(this.mTimer);
+    document.removeEventListener('scroll', this.onScroll, true);
+    window.removeEventListener('wheel', this.onWheel);
+    window.removeEventListener('touchstart', this.onTouchStart);
+    window.removeEventListener('touchmove', this.onTouchMove);
+    window.removeEventListener('keydown', this.onKey);
+    window.removeEventListener('resize', this.onScroll);
+  }
+
+  renderVals() {
+    const p = this.state.p;
+    const vh = this.state.vh || 800;
+    const camTilt = this.props.cameraTilt == null ? 76 : this.props.cameraTilt;
+    const lidAngle = this.props.lidAngle == null ? 108 : this.props.lidAngle;
+
+    // top-down (tilt 0) → front view (tilt ~68) while the lid swings up on its
+    // top-edge hinge past vertical, so the display turns to face the camera.
+    const open = ease(seg(p, 0.08, 0.46));
+    const boot = seg(p, 0.44, 0.56);
+    const os = seg(p, 0.56, 0.68);
+    // the fixed OS window behind the overlay takes over, so the in-screen copy
+    // leaves before the laptop dissolves — the two are never visible together
+    const win1 = ease(seg(p, 0.58, 0.68));
+    const win2 = ease(seg(p, 0.63, 0.72)) * (1 - ease(seg(p, 0.72, 0.80)));
+    const push = ease(seg(p, 0.70, 0.82));
+
+    const rotX = open * camTilt;
+    const lid = open * lidAngle;
+
+    // geometry, in unscaled px measured from the hinge line
+    const DECK = 694;
+    const rad = d => d * Math.PI / 180;
+    const ct = Math.cos(rad(camTilt)), st = Math.sin(rad(camTilt));
+    const ly = DECK * Math.cos(rad(lidAngle)), lz = DECK * Math.sin(rad(lidAngle));
+    const lidUp = -(ly * ct - lz * st);          // how far the screen's far edge sits above the hinge
+    const deckDown = DECK * ct;                  // how far the deck runs below the hinge
+    // the deck runs toward the camera, so perspective magnifies it: pad its share
+    const deckVisual = deckDown * 1.12;
+    const openFit = (vh * 0.72) / (lidUp + deckVisual);
+    const closedFit = (vh * 0.78) / DECK;
+    const scale = lerp(Math.min(0.72, closedFit), Math.min(0.78, openFit), open);
+    const y = lerp(-DECK / 2, (lidUp - deckVisual) / 2, open) * scale;
+
+    // final phase: the screen grows until it IS the viewport
+    const screenH = lidUp * scale;
+    const cy = y - screenH / 2;
+    const OVER = 1.04;
+    const vw0 = this.state.vw || 1280;
+    const screenW = 980 * scale;
+    const zTarget = Math.max(1, (vh * OVER) / Math.max(1, screenH), (vw0 * OVER) / Math.max(1, screenW));
+    const z = lerp(1, zTarget, push);
+    const zoom = 'scale(' + z.toFixed(3) + ') translateY(' + (-cy * push).toFixed(1) + 'px)';
+
+    // where the OS window's frame lands in screen-local px once the screen fills the viewport
+    const vw = vw0;
+    const k = Math.max((vh * OVER) / DECK, (vw * OVER) / 980);
+    const hLocal = vh / k, wLocal = vw / k;
+    const fit = null;
+    const w1L = fit ? fit.l : Math.max(0, (980 - wLocal) / 2 + 26 / k);
+    const w1T = fit ? fit.t : Math.max(0, (DECK - hLocal) / 2 + 44 / k);
+    const w1B = fit ? fit.b : Math.max(0, (DECK - hLocal) / 2 + 70 / k);
+
+    let phase = 'closed';
+    if (p > 0.08 && open < 1) phase = 'opening';
+    else if (boot > 0 && os === 0) phase = 'power on';
+    else if (os > 0 && win1 === 0) phase = 'system';
+    else if (win1 > 0 && push === 0) phase = 'cv';
+    else if (push > 0) phase = 'full screen';
+
+    return {
+      music: this.state.music ? 'Sound on' : (this.state.needsTap ? 'Enable sound' : 'Sound off'),
+      toggleMusic: () => this.toggleMusic(),
+      s: {
+        rig: 'translateY(' + y.toFixed(1) + 'px) scale(' + scale.toFixed(3) + ') rotateX(' + rotX.toFixed(2) + 'deg)',
+        lid: 'rotateX(' + lid.toFixed(2) + 'deg)',
+        zoom: zoom,
+        chassisOp: (1 - ease(seg(p, 0.86, 0.97))).toFixed(3),
+        deckShadeOp: (1 - open).toFixed(3),
+        lidBackOp: 1,
+        screenOp: 1,
+        bootOp: (boot * (1 - os)).toFixed(3),
+        osOp: os.toFixed(3),
+        w1L: w1L.toFixed(1),
+        w1T: w1T.toFixed(1),
+        w1B: w1B.toFixed(1),
+        win1Op: win1.toFixed(3),
+        win1Tf: 'translateY(' + lerp(26, 0, win1).toFixed(1) + 'px) scale(' + lerp(0.965, 1, win1).toFixed(3) + ')',
+        win2Op: win2.toFixed(3),
+        win2Tf: 'translateY(' + lerp(20, 0, win2).toFixed(1) + 'px)',
+        chromeOp: (1 - ease(seg(p, 0.66, 0.84))).toFixed(3),
+        hintOp: (1 - ease(seg(p, 0.02, 0.12))).toFixed(3),
+        outOp: '0',
+        revealOp: (1 - seg(p, 0.82, 0.94)).toFixed(3),
+        phase: phase,
+        pct: (p * 100).toFixed(1) + '%'
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>
