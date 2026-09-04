@@ -78,6 +78,41 @@
   @keyframes bgAur2 { 0% { transform: translate3d(9%,-6%,0) scale(1.22) rotate(0deg) } 33% { transform: translate3d(-11%,9%,0) scale(1) rotate(-22deg) } 66% { transform: translate3d(5%,13%,0) scale(1.32) rotate(18deg) } 100% { transform: translate3d(9%,-6%,0) scale(1.22) rotate(0deg) } }
   @keyframes bgSheen { 0% { opacity: .10; transform: translate3d(-7%,0,0) } 50% { opacity: .44; transform: translate3d(7%,0,0) } 100% { opacity: .10; transform: translate3d(-7%,0,0) } }
   @keyframes hintDrift { 0%,100% { transform: translateY(0); opacity: .5 } 50% { transform: translateY(7px); opacity: 1 } }
+  /* Responsive. Every rule needs !important: the layout is authored in inline
+     styles, which otherwise beat anything declared here. The in-screen copy is
+     laid out at real viewport px too, so these breakpoints apply to it as well
+     and the two stay identical through the hand-off. */
+  @media (max-width: 1100px) {
+    .wrap { padding-left: 30px !important; padding-right: 30px !important }
+    .twocol { grid-template-columns: 1fr !important; gap: 46px !important; margin-top: 54px !important }
+  }
+  @media (max-width: 820px) {
+    .work { grid-template-columns: 1fr !important; gap: 20px !important }
+    .work > div { grid-column: 1 !important; grid-row: auto !important }
+    .cards { grid-template-columns: 1fr !important; gap: 0 !important }
+    .heroname { font-size: 38px !important }
+    .herorole { font-size: 16px !important }
+    .sechead h2 { font-size: 36px !important }
+  }
+  @media (max-width: 620px) {
+    .wrap { padding-left: 20px !important; padding-right: 20px !important; padding-top: 40px !important }
+    .hero { gap: 16px !important }
+    .heroimg { width: 72px !important; height: 72px !important }
+    .heroname { font-size: 30px !important }
+    .sechead { flex-wrap: wrap !important; gap: 6px !important }
+    .sechead h2 { font-size: 28px !important }
+    .kv, .exp { grid-template-columns: 1fr !important; gap: 4px !important }
+    .contactrow { gap: 22px !important; margin-top: 48px !important }
+    .contactrow p { font-size: 20px !important; word-break: break-word }
+    .contactrow > div { min-width: 0 !important }
+    .links { flex-wrap: wrap !important; gap: 8px 16px !important }
+    .topnav span:not(:first-child), .topmeta span { display: none !important }
+  }
+  @media (max-width: 420px) {
+    .hero { flex-direction: column !important; align-items: flex-start !important }
+    .heroname { font-size: 27px !important }
+    .tags { gap: 5px !important }
+  }
   @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important } }
   @keyframes caretBlink { 0%,49% { opacity: 1 } 50%,100% { opacity: 0 } }
 </style>
@@ -156,17 +191,17 @@
                       <span style="margin-left:12px;font-size:12px;color:rgba(0,0,0,.55)">Nasir Mustafayev — Portfolio</span>
                     </div>
                     <div style="flex:1;min-height:0;overflow:hidden">
-<div style="max-width:1100px;margin:0 auto;padding:64px 44px 0">
+<div class="wrap" style="zoom:{{ s.uiZoom }};max-width:1100px;margin:0 auto;padding:64px 44px 0">
   <div style="font-size:11px;letter-spacing:.05em;text-transform:uppercase;font-weight:600;color:rgba(0,0,0,.4)">Portfolio</div>
-  <div style="display:flex;align-items:center;gap:26px;margin-top:20px">
-    <img src="uploads/profile-nasir.webp" alt="" style="flex:none;width:104px;height:104px;border-radius:50%;object-fit:cover;object-position:52% 28%;box-shadow:0 1px 0 rgba(0,0,0,.08), 0 10px 24px rgba(0,0,0,.14)">
+  <div class="hero" style="display:flex;align-items:center;gap:26px;margin-top:20px">
+    <img class="heroimg" src="uploads/profile-nasir.webp" alt="" style="flex:none;width:104px;height:104px;border-radius:50%;object-fit:cover;object-position:52% 28%;box-shadow:0 1px 0 rgba(0,0,0,.08), 0 10px 24px rgba(0,0,0,.14)">
     <div>
-      <div style="font-size:50px;font-weight:600;letter-spacing:-.028em;line-height:1.02">Nasir Mustafayev</div>
-      <div style="margin-top:10px;font-size:19px;font-weight:600;letter-spacing:-.02em;color:rgba(0,0,0,.5)">Front-End Developer / Software Engineer — Baku</div>
+      <div class="heroname" style="font-size:50px;font-weight:600;letter-spacing:-.028em;line-height:1.02">Nasir Mustafayev</div>
+      <div class="herorole" style="margin-top:10px;font-size:19px;font-weight:600;letter-spacing:-.02em;color:rgba(0,0,0,.5)">Front-End Developer / Software Engineer — Baku</div>
     </div>
   </div>
   <p style="margin:24px 0 0;max-width:660px;font-size:15px;line-height:1.65;color:rgba(0,0,0,.72);text-wrap:pretty">Computer Science student at Holberton School with five years of enterprise IT experience. Front ends in React and TypeScript, back-end APIs in Python and Node.js with PostgreSQL.</p>
-  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:22px">
+  <div class="tags" style="display:flex;flex-wrap:wrap;gap:6px;margin-top:22px">
     <span style="border:1px solid rgba(0,0,0,.16);border-radius:100px;padding:5px 12px;font-size:11px">TypeScript</span>
     <span style="border:1px solid rgba(0,0,0,.16);border-radius:100px;padding:5px 12px;font-size:11px">React</span>
     <span style="border:1px solid rgba(0,0,0,.16);border-radius:100px;padding:5px 12px;font-size:11px">Node</span>
@@ -202,22 +237,22 @@
   </div>
 </section>
 
-<div style="position:fixed;top:0;left:0;right:0;z-index:40;height:30px;display:flex;align-items:center;justify-content:space-between;padding:0 18px;background:rgba(10,14,20,.55);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);color:rgba(255,255,255,.92);font-size:12px;letter-spacing:-.005em">
-  <div style="display:flex;align-items:center;gap:20px">
+<div class="topbar" style="position:fixed;top:0;left:0;right:0;z-index:40;height:30px;display:flex;align-items:center;justify-content:space-between;padding:0 18px;background:rgba(10,14,20,.55);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);color:rgba(255,255,255,.92);font-size:12px;letter-spacing:-.005em">
+  <div class="topnav" style="display:flex;align-items:center;gap:20px">
     <span style="font-weight:600">Portfolio</span>
     <span style="opacity:.75">File</span>
     <span style="opacity:.75">Work</span>
     <span style="opacity:.75">About</span>
     <span style="opacity:.75">Contact</span>
   </div>
-  <div style="display:flex;align-items:center;gap:16px">
+  <div class="topmeta" style="display:flex;align-items:center;gap:16px">
     <button type="button" onClick="{{ toggleMusic }}" style="appearance:none;border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.08);color:rgba(255,255,255,.9);font:inherit;font-size:11.5px;letter-spacing:-.005em;padding:2px 10px;border-radius:100px;cursor:pointer" style-hover="background:rgba(255,255,255,.18)">♪ {{ music }}</button>
     <span style="opacity:.75">Baku</span>
     <span style="opacity:.75">Available for work</span>
   </div>
 </div>
 
-<div style="position:fixed;top:44px;left:26px;right:26px;bottom:70px;z-index:20;display:flex;flex-direction:column;border-radius:12px;overflow:hidden;background:#f5f5f7;color:#1d1d1f;box-shadow:0 40px 90px rgba(0,0,0,.5), inset 0 0 0 1px rgba(0,0,0,.08);transform-origin:50% 100%;opacity:{{ s.winOp }};transform:{{ s.winTf }};transition:opacity .3s cubic-bezier(.3,.7,.2,1), transform .44s cubic-bezier(.16,1,.3,1)">
+<div style="position:fixed;top:{{ s.winT }}px;left:{{ s.winL }}px;right:{{ s.winL }}px;bottom:{{ s.winB }}px;z-index:20;display:flex;flex-direction:column;border-radius:12px;overflow:hidden;background:#f5f5f7;color:#1d1d1f;box-shadow:0 40px 90px rgba(0,0,0,.5), inset 0 0 0 1px rgba(0,0,0,.08);transform-origin:50% 100%;opacity:{{ s.winOp }};transform:{{ s.winTf }};transition:opacity .3s cubic-bezier(.3,.7,.2,1), transform .44s cubic-bezier(.16,1,.3,1)">
   <div style="flex:none;height:38px;display:flex;align-items:center;gap:9px;padding:0 14px;background:#e8e8ed;border-bottom:1px solid rgba(0,0,0,.1)">
     <div style="width:11px;height:11px;border-radius:50%;background:#ff5f57"></div>
     <div style="width:11px;height:11px;border-radius:50%;background:#febc2e"></div>
@@ -226,17 +261,17 @@
   </div>
   <div id="scroller" style="flex:1;min-height:0;overflow-y:auto;overflow-x:hidden">
     <div id="revealspacer" style="height:clamp(1250px, 195vh, 2150px)"></div>
-    <div style="max-width:1100px;margin:0 auto;padding:64px 44px 0">
+    <div class="wrap" style="zoom:{{ s.uiZoom }};max-width:1100px;margin:0 auto;padding:64px 44px 0">
   <div style="font-size:11px;letter-spacing:.05em;text-transform:uppercase;font-weight:600;color:rgba(0,0,0,.4)">Portfolio</div>
-  <div style="display:flex;align-items:center;gap:26px;margin-top:20px">
-    <img src="uploads/profile-nasir.webp" alt="Nasir Mustafayev" style="flex:none;width:104px;height:104px;border-radius:50%;object-fit:cover;object-position:52% 28%;box-shadow:0 1px 0 rgba(0,0,0,.08), 0 10px 24px rgba(0,0,0,.14)">
+  <div class="hero" style="display:flex;align-items:center;gap:26px;margin-top:20px">
+    <img class="heroimg" src="uploads/profile-nasir.webp" alt="Nasir Mustafayev" style="flex:none;width:104px;height:104px;border-radius:50%;object-fit:cover;object-position:52% 28%;box-shadow:0 1px 0 rgba(0,0,0,.08), 0 10px 24px rgba(0,0,0,.14)">
     <div>
-      <h1 style="margin:0;font-size:50px;font-weight:600;letter-spacing:-.028em;line-height:1.02">Nasir Mustafayev</h1>
-      <div style="margin-top:10px;font-size:19px;font-weight:600;letter-spacing:-.02em;color:rgba(0,0,0,.5)">Front-End Developer / Software Engineer — Baku</div>
+      <h1 class="heroname" style="margin:0;font-size:50px;font-weight:600;letter-spacing:-.028em;line-height:1.02">Nasir Mustafayev</h1>
+      <div class="herorole" style="margin-top:10px;font-size:19px;font-weight:600;letter-spacing:-.02em;color:rgba(0,0,0,.5)">Front-End Developer / Software Engineer — Baku</div>
     </div>
   </div>
   <p style="margin:24px 0 0;max-width:660px;font-size:15px;line-height:1.65;color:rgba(0,0,0,.72);text-wrap:pretty">Computer Science student at Holberton School with five years of enterprise IT experience. Front ends in React and TypeScript, back-end APIs in Python and Node.js with PostgreSQL.</p>
-  <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:22px">
+  <div class="tags" style="display:flex;flex-wrap:wrap;gap:6px;margin-top:22px">
     <span style="border:1px solid rgba(0,0,0,.16);border-radius:100px;padding:5px 12px;font-size:11px">TypeScript</span>
     <span style="border:1px solid rgba(0,0,0,.16);border-radius:100px;padding:5px 12px;font-size:11px">React</span>
     <span style="border:1px solid rgba(0,0,0,.16);border-radius:100px;padding:5px 12px;font-size:11px">Node</span>
@@ -247,15 +282,15 @@
   </div>
   <div style="margin-top:22px;font-size:12.5px;color:rgba(0,0,0,.5)">nasir.mustafayev@gmail.com · github.com/NasirMustafayev</div>
 </div>
-    <div style="max-width:1100px;margin:0 auto;padding:96px 44px 110px">
+    <div class="wrap" style="zoom:{{ s.uiZoom }};max-width:1100px;margin:0 auto;padding:96px 44px 110px">
 
-    <div style="display:flex;justify-content:space-between;align-items:baseline;padding-bottom:18px;border-bottom:1px solid rgba(0,0,0,.16)">
+    <div class="sechead" style="display:flex;justify-content:space-between;align-items:baseline;padding-bottom:18px;border-bottom:1px solid rgba(0,0,0,.16)">
       <h2 style="margin:0;font-size:48px;font-weight:600;letter-spacing:-.026em">Selected work</h2>
       <span style="font-size:12px;letter-spacing:-.005em;color:rgba(0,0,0,.45)">Six projects · three previews</span>
     </div>
 
     <div style="display:grid;gap:56px;margin-top:44px">
-      <div style="display:grid;grid-template-columns:1.15fr 1fr;gap:40px;align-items:center">
+      <div class="work" style="display:grid;grid-template-columns:1.15fr 1fr;gap:40px;align-items:center">
         <div style="grid-column:1;grid-row:1;aspect-ratio:16/10;border-radius:14px;overflow:hidden;background:#eef1f6;box-shadow:0 1px 2px rgba(0,0,0,.07), 0 14px 34px rgba(0,0,0,.09)">
           <img src="uploads/project-azxercle.webp" alt="AzXərclə screenshot" style="display:block;width:100%;height:100%;object-fit:cover;object-position:left top">
         </div>
@@ -266,7 +301,7 @@
           <a href="https://github.com/NasirMustafayev/AzXercle" target="_blank" rel="noopener" style="justify-self:start;display:inline-flex;align-items:center;gap:6px;font-size:12.5px;color:#0066cc;text-decoration:none">GitHub<span style="font-size:13px">↗</span></a>
         </div>
       </div>
-      <div style="display:grid;grid-template-columns:1fr 1.15fr;gap:40px;align-items:center">
+      <div class="work" style="display:grid;grid-template-columns:1fr 1.15fr;gap:40px;align-items:center">
         <div style="grid-column:2;grid-row:1;aspect-ratio:16/10;border-radius:14px;overflow:hidden;background:#eef1f6;box-shadow:0 1px 2px rgba(0,0,0,.07), 0 14px 34px rgba(0,0,0,.09)">
           <img src="uploads/project-hrim.webp" alt="HRIM screenshot" style="display:block;width:100%;height:100%;object-fit:cover;object-position:left top">
         </div>
@@ -280,7 +315,7 @@
           </div>
         </div>
       </div>
-      <div style="display:grid;grid-template-columns:1.15fr 1fr;gap:40px;align-items:center">
+      <div class="work" style="display:grid;grid-template-columns:1.15fr 1fr;gap:40px;align-items:center">
         <div style="grid-column:1;grid-row:1;aspect-ratio:16/10;border-radius:14px;overflow:hidden;background:#eef1f6;box-shadow:0 1px 2px rgba(0,0,0,.07), 0 14px 34px rgba(0,0,0,.09)">
           <img src="uploads/project-moviesdb.webp" alt="MoviesDB screenshot" style="display:block;width:100%;height:100%;object-fit:cover;object-position:left top">
         </div>
@@ -293,7 +328,7 @@
       </div>
     </div>
 
-    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:0 52px;margin-top:52px;border-top:1px solid rgba(0,0,0,.12)">
+    <div class="cards" style="display:grid;grid-template-columns:repeat(2,1fr);gap:0 52px;margin-top:52px;border-top:1px solid rgba(0,0,0,.12)">
       <div style="padding:22px 0;border-bottom:1px solid rgba(0,0,0,.12);display:grid;gap:9px;align-content:start">
         <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px"><span style="font-weight:600;letter-spacing:-.022em;font-size:18px">CVPilot</span><span style="font-size:9px;letter-spacing:.04em;text-transform:uppercase;font-weight:500;color:rgba(0,0,0,.42)">FastAPI · JWT</span></div>
         <p style="margin:0;font-size:13.5px;line-height:1.6;color:rgba(0,0,0,.7);text-wrap:pretty">Separate HR and candidate workspaces for uploading a CV, scoring it against job requirements, and reloading saved analyses behind JWT-authenticated API routes.</p>
@@ -313,39 +348,39 @@
 
     <p style="margin:22px 0 0;font-size:12px;line-height:1.6;color:rgba(0,0,0,.5);max-width:660px">AI coding assistants were part of my workflow on AzXərclə, HRIM, CVPilot and Tapis. MoviesDB and the e-commerce store were written entirely by hand.</p>
 
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:52px;margin-top:76px;padding-top:34px;border-top:1px solid rgba(0,0,0,.16)">
+    <div class="twocol" style="display:grid;grid-template-columns:1fr 1fr;gap:52px;margin-top:76px;padding-top:34px;border-top:1px solid rgba(0,0,0,.16)">
       <div>
         <h2 style="margin:0;font-size:10px;letter-spacing:.055em;text-transform:uppercase;font-weight:600;color:rgba(0,0,0,.42)">About</h2>
         <p style="margin:16px 0 0;font-size:24px;font-weight:600;line-height:1.32;letter-spacing:-.022em;text-wrap:pretty">Computer Science student at Holberton School with five years of enterprise IT experience.</p>
         <p style="margin:16px 0 0;font-size:14px;line-height:1.65;color:rgba(0,0,0,.7);text-wrap:pretty">I have built web applications end to end — front ends in React and TypeScript, back-end APIs in Python and Node.js with PostgreSQL — alongside a practical grounding in Linux, networking and production systems. Open to front-end, back-end or systems work; I am looking for a team I can learn from while I develop depth in one of them.</p>
         <div style="display:grid;gap:10px;margin-top:26px">
-          <div style="display:grid;grid-template-columns:96px 1fr;gap:14px;font-size:13px;line-height:1.6"><span style="letter-spacing:.03em;text-transform:uppercase;font-size:9.5px;font-weight:600;color:rgba(0,0,0,.42);padding-top:3px">Proficient</span><span style="color:rgba(0,0,0,.75)">JavaScript, TypeScript, React, HTML/CSS, Git, MySQL, PostgreSQL, SQLite</span></div>
-          <div style="display:grid;grid-template-columns:96px 1fr;gap:14px;font-size:13px;line-height:1.6"><span style="letter-spacing:.03em;text-transform:uppercase;font-size:9.5px;font-weight:600;color:rgba(0,0,0,.42);padding-top:3px">Working</span><span style="color:rgba(0,0,0,.75)">Python (FastAPI, Flask), Node.js/Express, C, Bash, MongoDB, Docker, PHP, REST API design</span></div>
-          <div style="display:grid;grid-template-columns:96px 1fr;gap:14px;font-size:13px;line-height:1.6"><span style="letter-spacing:.03em;text-transform:uppercase;font-size:9.5px;font-weight:600;color:rgba(0,0,0,.42);padding-top:3px">Systems</span><span style="color:rgba(0,0,0,.75)">Linux, Windows Server, networking fundamentals, ERP administration</span></div>
-          <div style="display:grid;grid-template-columns:96px 1fr;gap:14px;font-size:13px;line-height:1.6"><span style="letter-spacing:.03em;text-transform:uppercase;font-size:9.5px;font-weight:600;color:rgba(0,0,0,.42);padding-top:3px">Languages</span><span style="color:rgba(0,0,0,.75)">Azerbaijani (native) · Turkish (full professional) · English (professional)</span></div>
+          <div class="kv" style="display:grid;grid-template-columns:96px 1fr;gap:14px;font-size:13px;line-height:1.6"><span style="letter-spacing:.03em;text-transform:uppercase;font-size:9.5px;font-weight:600;color:rgba(0,0,0,.42);padding-top:3px">Proficient</span><span style="color:rgba(0,0,0,.75)">JavaScript, TypeScript, React, HTML/CSS, Git, MySQL, PostgreSQL, SQLite</span></div>
+          <div class="kv" style="display:grid;grid-template-columns:96px 1fr;gap:14px;font-size:13px;line-height:1.6"><span style="letter-spacing:.03em;text-transform:uppercase;font-size:9.5px;font-weight:600;color:rgba(0,0,0,.42);padding-top:3px">Working</span><span style="color:rgba(0,0,0,.75)">Python (FastAPI, Flask), Node.js/Express, C, Bash, MongoDB, Docker, PHP, REST API design</span></div>
+          <div class="kv" style="display:grid;grid-template-columns:96px 1fr;gap:14px;font-size:13px;line-height:1.6"><span style="letter-spacing:.03em;text-transform:uppercase;font-size:9.5px;font-weight:600;color:rgba(0,0,0,.42);padding-top:3px">Systems</span><span style="color:rgba(0,0,0,.75)">Linux, Windows Server, networking fundamentals, ERP administration</span></div>
+          <div class="kv" style="display:grid;grid-template-columns:96px 1fr;gap:14px;font-size:13px;line-height:1.6"><span style="letter-spacing:.03em;text-transform:uppercase;font-size:9.5px;font-weight:600;color:rgba(0,0,0,.42);padding-top:3px">Languages</span><span style="color:rgba(0,0,0,.75)">Azerbaijani (native) · Turkish (full professional) · English (professional)</span></div>
         </div>
       </div>
 
       <div>
         <h2 style="margin:0;font-size:10px;letter-spacing:.055em;text-transform:uppercase;font-weight:600;color:rgba(0,0,0,.42)">Experience</h2>
         <div style="display:grid;gap:0;margin-top:16px">
-          <div style="display:grid;grid-template-columns:80px 1fr;gap:18px;padding:15px 0;border-top:1px solid rgba(0,0,0,.12)">
+          <div class="exp" style="display:grid;grid-template-columns:80px 1fr;gap:18px;padding:15px 0;border-top:1px solid rgba(0,0,0,.12)">
             <span style="font-size:12px;color:rgba(0,0,0,.45);padding-top:5px">2021 —</span>
             <div><div style="font-size:15px;font-weight:600;letter-spacing:-.015em">IT Specialist — Idea LLC Baku</div><p style="margin:6px 0 0;font-size:13.5px;line-height:1.6;color:rgba(0,0,0,.7);text-wrap:pretty">Maintain the company's IT infrastructure — servers, networks and workstations. Administer and monitor ERP systems, act as the main technical point of contact for staff, and own IT procurement and vendor relationships.</p></div>
           </div>
-          <div style="display:grid;grid-template-columns:80px 1fr;gap:18px;padding:15px 0;border-top:1px solid rgba(0,0,0,.12)">
+          <div class="exp" style="display:grid;grid-template-columns:80px 1fr;gap:18px;padding:15px 0;border-top:1px solid rgba(0,0,0,.12)">
             <span style="font-size:12px;color:rgba(0,0,0,.45);padding-top:5px">2025 — 26</span>
             <div><div style="font-size:15px;font-weight:600;letter-spacing:-.015em">Holberton School Azerbaijan — Computer Science</div><p style="margin:6px 0 0;font-size:13.5px;line-height:1.6;color:rgba(0,0,0,.7)">C and shell, data structures and algorithms, system design, and full-stack web development with Python, Flask, JavaScript and React.</p></div>
           </div>
-          <div style="display:grid;grid-template-columns:80px 1fr;gap:18px;padding:15px 0;border-top:1px solid rgba(0,0,0,.12)">
+          <div class="exp" style="display:grid;grid-template-columns:80px 1fr;gap:18px;padding:15px 0;border-top:1px solid rgba(0,0,0,.12)">
             <span style="font-size:12px;color:rgba(0,0,0,.45);padding-top:5px">2026</span>
             <div><div style="font-size:15px;font-weight:600;letter-spacing:-.015em">Andersen — Software Engineering Internship</div><p style="margin:6px 0 0;font-size:13.5px;line-height:1.6;color:rgba(0,0,0,.7)">Passed the technical interview process and received an offer for the internship programme.</p></div>
           </div>
-          <div style="display:grid;grid-template-columns:80px 1fr;gap:18px;padding:15px 0;border-top:1px solid rgba(0,0,0,.12)">
+          <div class="exp" style="display:grid;grid-template-columns:80px 1fr;gap:18px;padding:15px 0;border-top:1px solid rgba(0,0,0,.12)">
             <span style="font-size:12px;color:rgba(0,0,0,.45);padding-top:5px">2023</span>
             <div><div style="font-size:15px;font-weight:600;letter-spacing:-.015em">EPAM / Upskill — StrategEast IT Hub</div><p style="margin:6px 0 0;font-size:13.5px;line-height:1.6;color:rgba(0,0,0,.7)">Front-End Development — HTML, CSS, JavaScript.</p></div>
           </div>
-          <div style="display:grid;grid-template-columns:80px 1fr;gap:18px;padding:15px 0;border-top:1px solid rgba(0,0,0,.12);border-bottom:1px solid rgba(0,0,0,.12)">
+          <div class="exp" style="display:grid;grid-template-columns:80px 1fr;gap:18px;padding:15px 0;border-top:1px solid rgba(0,0,0,.12);border-bottom:1px solid rgba(0,0,0,.12)">
             <span style="font-size:12px;color:rgba(0,0,0,.45);padding-top:5px">2016 — 20</span>
             <div><div style="font-size:15px;font-weight:600;letter-spacing:-.015em">Lankaran State University</div><p style="margin:6px 0 0;font-size:13.5px;line-height:1.6;color:rgba(0,0,0,.7)">B.Sc. Accounting and Auditing.</p></div>
           </div>
@@ -353,11 +388,11 @@
       </div>
     </div>
 
-    <div style="margin-top:76px;padding:38px 0 0;border-top:1px solid rgba(0,0,0,.16);display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap">
+    <div class="contactrow" style="margin-top:76px;padding:38px 0 0;border-top:1px solid rgba(0,0,0,.16);display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap">
       <div>
         <h2 style="margin:0;font-size:10px;letter-spacing:.055em;text-transform:uppercase;font-weight:600;color:rgba(0,0,0,.42)">Contact</h2>
         <p style="margin:14px 0 0;font-weight:600;letter-spacing:-.022em;font-size:30px;line-height:1.2">nasir.mustafayev@gmail.com</p>
-        <div style="display:flex;gap:22px;margin-top:20px;font-size:11px;letter-spacing:.05em">
+        <div class="links" style="display:flex;gap:22px;margin-top:20px;font-size:11px;letter-spacing:.05em">
           <a href="https://github.com/NasirMustafayev" style="color:#0066cc">github.com/NasirMustafayev</a>
           <a href="https://linkedin.com/in/nasirmustafayev" style="color:#0066cc">linkedin.com/in/nasirmustafayev</a>
         </div>
@@ -825,6 +860,10 @@ class Component extends DCLogic {
     // end. So the ceiling has to be the tightest fit across the whole swing, or
     // the mac grows and then has to pull back mid-animation to stay on screen.
     const vw0 = this.state.vw || 1280;
+    // the window hugs the edges on a small screen; these feed both its own insets
+    // and the frame the in-screen copy has to land on
+    const tight = vw0 < 620;
+    const WIN_L = tight ? 8 : 26, WIN_T = tight ? 36 : 44, WIN_B = tight ? 16 : 70;
     let maxH = 1, maxW = 1;
     for (let i = 0; i <= 24; i++) {
       const e = extent(i / 24);
@@ -883,9 +922,9 @@ class Component extends DCLogic {
     // BEZEL: the copy lives in #lidinner, which the screen's 9px bezel padding
     // insets from the 980x694 lid frame these are measured in
     const BEZEL = 9;
-    const w1L = Math.max(0, (980 - wLocal) / 2 + 26 / k - BEZEL);
-    const w1T = Math.max(0, (DECK - hLocal) / 2 + 44 / k - BEZEL);
-    const w1B = Math.max(0, (DECK - hLocal) / 2 + 70 / k - BEZEL);
+    const w1L = Math.max(0, (980 - wLocal) / 2 + WIN_L / k - BEZEL);
+    const w1T = Math.max(0, (DECK - hLocal) / 2 + WIN_T / k - BEZEL);
+    const w1B = Math.max(0, (DECK - hLocal) / 2 + WIN_B / k - BEZEL);
 
     let phase = 'closed';
     if (p > 0.06 && open < 1) phase = 'opening';
@@ -905,6 +944,11 @@ class Component extends DCLogic {
         chassisOp: (1 - ease(seg(p, 0.90, 0.96))).toFixed(3),
         // the front edge only exists once the camera has tilted off top-down
         lipOp: ((1 - ease(seg(p, 0.90, 0.96))) * seg(open, 0.01, 0.12)).toFixed(3),
+        // Page type scales with the viewport — at a fixed 15px body it reads tiny
+        // on a large display, and the 1100px measure leaves most of the window
+        // empty. Both the real window and the in-screen copy take the same zoom,
+        // so they still match at the hand-off.
+        uiZoom: clamp(1 + (vw0 - 1440) / 1440 * 0.55, 1, 1.30).toFixed(3),
         // and the deck's bottom corners square off over the same stretch, so
         // closed they still match the lid's 22px curve exactly
         deckR: lerp(22, 0, seg(open, 0.01, 0.12)).toFixed(1),
@@ -921,8 +965,9 @@ class Component extends DCLogic {
         w1T: w1T.toFixed(1),
         w1B: w1B.toFixed(1),
         w1R: (12 / k).toFixed(2),
-        w1W: (vw0 - 52).toFixed(0),
-        w1H: (vh - 114).toFixed(0),
+        w1W: (vw0 - 2 * WIN_L).toFixed(0),
+        w1H: (vh - WIN_T - WIN_B).toFixed(0),
+        winL: WIN_L, winT: WIN_T, winB: WIN_B,
         w1k: (1 / k).toFixed(5),
         winOp: winOpen ? '1' : '0',
         // no transform at all once open, so the text the user actually reads is
