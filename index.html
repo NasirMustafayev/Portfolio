@@ -4,58 +4,110 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Nasir Mustafayev — Front-End Developer &amp; Software Engineer</title>
-<meta name="description" content="Front-end developer and software engineer in Baku — React and TypeScript front ends, Python and Node.js APIs with PostgreSQL. Selected work and CV.">
+<title>Nasir Mustafayev — Front-End Developer &amp; Software Engineer in Baku</title>
+<meta name="description" content="Portfolio of Nasir Mustafayev, a front-end developer and software engineer in Baku, Azerbaijan. React, TypeScript, Python and Node.js — including AzXərclə, an Android receipt-scanning spending tracker.">
 <meta name="author" content="Nasir Mustafayev">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta name="theme-color" content="#0b1622">
 <meta name="color-scheme" content="light dark">
 
-<!-- ►► ONE THING TO EDIT ON DEPLOY: replace this domain in the four URLs below.
-     Link previews (LinkedIn, Twitter/X, Slack, iMessage) need absolute URLs —
-     relative paths are ignored by most scrapers, so they must carry the real host. -->
-<link rel="canonical" href="https://nasirmustafayev.com/">
-<meta property="og:url" content="https://nasirmustafayev.com/">
-<meta property="og:image" content="https://nasirmustafayev.com/uploads/og-card.jpg">
-<meta name="twitter:image" content="https://nasirmustafayev.com/uploads/og-card.jpg">
+<!-- ►► ON DEPLOY: swap the domain. Link previews and search engines need absolute URLs, and the
+     same host appears in this file, robots.txt and sitemap.xml. From the repo root:
+       sed -i '' 's#https://nasirmustafayev.vercel.app#https://YOUR-DOMAIN#g' index.html robots.txt sitemap.xml -->
+<link rel="canonical" href="https://nasirmustafayev.vercel.app/">
+<meta property="og:url" content="https://nasirmustafayev.vercel.app/">
+<meta property="og:image" content="https://nasirmustafayev.vercel.app/uploads/og-card.jpg">
+<meta name="twitter:image" content="https://nasirmustafayev.vercel.app/uploads/og-card.jpg">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Nasir Mustafayev">
-<meta property="og:title" content="Nasir Mustafayev — Front-End Developer &amp; Software Engineer">
-<meta property="og:description" content="React and TypeScript front ends, Python and Node.js APIs with PostgreSQL. Selected work, experience and contact.">
+<meta property="og:title" content="Nasir Mustafayev — Front-End Developer &amp; Software Engineer in Baku">
+<meta property="og:description" content="React and TypeScript front ends, Python and Node.js APIs — and AzXərclə, an Android app that turns e-kassa receipts into a budget and price comparison.">
 <meta property="og:locale" content="en_US">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Nasir Mustafayev — Front-End Developer and Software Engineer, Baku">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Nasir Mustafayev — Front-End Developer &amp; Software Engineer">
-<meta name="twitter:description" content="React and TypeScript front ends, Python and Node.js APIs with PostgreSQL. Selected work, experience and contact.">
+<meta property="og:image:type" content="image/jpeg">
+<meta name="twitter:title" content="Nasir Mustafayev — Front-End Developer &amp; Software Engineer in Baku">
+<meta name="twitter:description" content="React and TypeScript front ends, Python and Node.js APIs — and AzXərclə, an Android app that turns e-kassa receipts into a budget and price comparison.">
 
+<link rel="icon" href="favicon-48.png" type="image/png" sizes="48x48">
 <link rel="icon" href="uploads/profile-nasir.webp" type="image/webp">
-<link rel="apple-touch-icon" href="uploads/profile-nasir.webp">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Nasir Mustafayev",
-  "jobTitle": "Front-End Developer / Software Engineer",
-  "email": "mailto:nasir.mustafayev@gmail.com",
-  "telephone": "+994516458488",
-  "url": "https://nasirmustafayev.com/",
-  "image": "https://nasirmustafayev.com/uploads/profile-nasir.webp",
-  "address": { "@type": "PostalAddress", "addressLocality": "Baku", "addressCountry": "AZ" },
-  "sameAs": [
-    "https://github.com/NasirMustafayev",
-    "https://linkedin.com/in/nasirmustafayev"
-  ],
-  "alumniOf": [
-    { "@type": "EducationalOrganization", "name": "Holberton School Azerbaijan" },
-    { "@type": "EducationalOrganization", "name": "Lankaran State University" }
-  ],
-  "worksFor": { "@type": "Organization", "name": "Idea LLC Baku" },
-  "knowsLanguage": ["az", "tr", "en"],
-  "knowsAbout": ["JavaScript", "TypeScript", "React", "Node.js", "Python", "PostgreSQL", "Linux"]
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://nasirmustafayev.vercel.app/#website",
+      "url": "https://nasirmustafayev.vercel.app/",
+      "name": "Nasir Mustafayev",
+      "inLanguage": "en",
+      "publisher": { "@id": "https://nasirmustafayev.vercel.app/#person" }
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": "https://nasirmustafayev.vercel.app/#profile",
+      "url": "https://nasirmustafayev.vercel.app/",
+      "name": "Nasir Mustafayev — Front-End Developer & Software Engineer in Baku",
+      "isPartOf": { "@id": "https://nasirmustafayev.vercel.app/#website" },
+      "mainEntity": { "@id": "https://nasirmustafayev.vercel.app/#person" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://nasirmustafayev.vercel.app/#person",
+      "name": "Nasir Mustafayev",
+      "jobTitle": "Front-End Developer / Software Engineer",
+      "email": "mailto:nasir.mustafayev@gmail.com",
+      "telephone": "+994516458488",
+      "url": "https://nasirmustafayev.vercel.app/",
+      "image": "https://nasirmustafayev.vercel.app/uploads/profile-nasir.webp",
+      "address": { "@type": "PostalAddress", "addressLocality": "Baku", "addressCountry": "AZ" },
+      "sameAs": [
+        "https://github.com/NasirMustafayev",
+        "https://linkedin.com/in/nasirmustafayev"
+      ],
+      "alumniOf": [
+        { "@type": "EducationalOrganization", "name": "Holberton School Azerbaijan" },
+        { "@type": "EducationalOrganization", "name": "Lankaran State University" }
+      ],
+      "worksFor": { "@type": "Organization", "name": "Idea LLC Baku" },
+      "knowsLanguage": ["az", "tr", "en"],
+      "knowsAbout": ["JavaScript", "TypeScript", "React", "Node.js", "Python", "PostgreSQL", "Linux", "Capacitor", "Android"]
+    },
+    {
+      "@type": "MobileApplication",
+      "@id": "https://nasirmustafayev.vercel.app/#azxercle",
+      "name": "AzXərclə",
+      "alternateName": "AzXercle",
+      "description": "Android spending tracker for Azerbaijan. Scan the QR code on an e-kassa receipt and the items, quantities and prices are read for you, then filed into categories, a monthly budget with a safe-to-spend-today figure, and a price comparison between shops.",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Android",
+      "softwareVersion": "1.4",
+      "inLanguage": ["az", "ru", "en"],
+      "image": "https://nasirmustafayev.vercel.app/uploads/azx-home.webp",
+      "screenshot": [
+        "https://nasirmustafayev.vercel.app/uploads/azx-home.webp",
+        "https://nasirmustafayev.vercel.app/uploads/azx-scan.webp",
+        "https://nasirmustafayev.vercel.app/uploads/azx-price-item.webp",
+        "https://nasirmustafayev.vercel.app/uploads/azx-budget.webp"
+      ],
+      "featureList": [
+        "Scan e-kassa receipt QR codes",
+        "Read paper receipts with the camera",
+        "Import bank receipts and PDF statements",
+        "Monthly budget and daily safe-to-spend figure",
+        "Price comparison across shops from scanned receipts",
+        "Debts, planned payments and reminders",
+        "Home-screen widgets",
+        "PIN and fingerprint lock"
+      ],
+      "author": { "@id": "https://nasirmustafayev.vercel.app/#person" }
+    }
+  ]
 }
 </script>
 
@@ -109,10 +161,25 @@
     .topnav span:not(:first-child), .topmeta span { display: none !important }
   }
   @media (max-width: 420px) {
+    .azx-shot { width: 160px }
     .hero { flex-direction: column !important; align-items: flex-start !important }
     .heroname { font-size: 27px !important }
     .tags { gap: 5px !important }
   }
+  /* AzXərclə phone mockups */
+  .azx-stage { position: relative; aspect-ratio: 16/10; border-radius: 14px; overflow: hidden; background: radial-gradient(120% 90% at 20% 0%, #1aa59d 0%, rgba(26,165,157,0) 60%), linear-gradient(150deg, #118a85 0%, #0b5f5d 100%); box-shadow: 0 1px 2px rgba(0,0,0,.07), 0 14px 34px rgba(0,0,0,.09) }
+  .azx-phone { position: absolute; width: 27%; aspect-ratio: 1280/2532; padding: 1.1%; box-sizing: border-box; border-radius: 12% / 6%; background: #12181c; box-shadow: 0 0 0 1px rgba(255,255,255,.14), 0 18px 40px rgba(0,0,0,.35) }
+  .azx-phone img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 10% / 5% }
+  .azx-phone.l { left: 6%; top: 17%; transform: rotate(-5deg) }
+  .azx-phone.c { left: 36.5%; top: 7%; z-index: 2 }
+  .azx-phone.r { left: 67%; top: 17%; transform: rotate(5deg) }
+  .azx-badge { position: absolute; left: 14px; bottom: 12px; z-index: 3; display: flex; align-items: center; gap: 8px; padding: 5px 11px 5px 6px; border-radius: 100px; background: rgba(8,40,40,.55); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); color: #fff; font-size: 11px; letter-spacing: -.005em }
+  .azx-badge img { width: 20px; height: 20px; border-radius: 6px }
+  .azx-shots { display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x proximity; padding: 4px 2px 18px; margin: 0; list-style: none; -webkit-overflow-scrolling: touch }
+  .azx-shot { flex: none; width: 188px; scroll-snap-align: start; margin: 0 }
+  .azx-shot .azx-phone { position: relative; width: 100%; left: auto; top: auto; background: #12181c; box-shadow: 0 0 0 1px rgba(0,0,0,.2), 0 10px 26px rgba(0,0,0,.18) }
+  .azx-shot figcaption { margin-top: 12px; font-size: 12px; line-height: 1.5; color: rgba(0,0,0,.62) }
+  .azx-shot figcaption b { display: block; font-size: 12.5px; color: #1d1d1f; letter-spacing: -.01em; margin-bottom: 1px }
   @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important } }
   @keyframes caretBlink { 0%,49% { opacity: 1 } 50%,100% { opacity: 0 } }
 </style>
@@ -284,46 +351,62 @@
 </div>
     <div class="wrap" style="zoom:{{ s.uiZoom }};max-width:1100px;margin:0 auto;padding:96px 44px 110px">
 
-    <div class="sechead" style="display:flex;justify-content:space-between;align-items:baseline;padding-bottom:18px;border-bottom:1px solid rgba(0,0,0,.16)">
+    <div id="work" class="sechead" style="display:flex;justify-content:space-between;align-items:baseline;padding-bottom:18px;border-bottom:1px solid rgba(0,0,0,.16)">
       <h2 style="margin:0;font-size:48px;font-weight:600;letter-spacing:-.026em">Selected work</h2>
-      <span style="font-size:12px;letter-spacing:-.005em;color:rgba(0,0,0,.45)">Six projects · three previews</span>
+      <span style="font-size:12px;letter-spacing:-.005em;color:rgba(0,0,0,.45)">Six projects · Android app, web apps and APIs</span>
     </div>
 
     <div style="display:grid;gap:56px;margin-top:44px">
+      <div id="azxercle" style="display:grid;gap:34px">
       <div class="work" style="display:grid;grid-template-columns:1.15fr 1fr;gap:40px;align-items:center">
-        <div style="grid-column:1;grid-row:1;aspect-ratio:16/10;border-radius:14px;overflow:hidden;background:#eef1f6;box-shadow:0 1px 2px rgba(0,0,0,.07), 0 14px 34px rgba(0,0,0,.09)">
-          <img src="uploads/project-azxercle.webp" alt="AzXərclə screenshot" style="display:block;width:100%;height:100%;object-fit:cover;object-position:left top">
+        <div class="azx-stage" style="grid-column:1;grid-row:1">
+          <div class="azx-phone l"><img src="uploads/azx-home.webp" width="480" height="949" alt="AzXərclə dashboard: total spending, a donut chart by category and recent receipts" loading="lazy" decoding="async"></div>
+          <div class="azx-phone r"><img src="uploads/azx-price-item.webp" width="480" height="949" alt="AzXərclə price comparison for one product across shop branches, cheapest first" loading="lazy" decoding="async"></div>
+          <div class="azx-phone c"><img src="uploads/azx-scan.webp" width="480" height="949" alt="AzXərclə add-expense screen with the e-kassa receipt QR scanner open" loading="lazy" decoding="async"></div>
+          <div class="azx-badge"><img src="uploads/azxercle-icon.webp" width="20" height="20" alt="" loading="lazy" decoding="async">Android app · v1.4</div>
         </div>
         <div style="grid-column:2;grid-row:1;display:grid;gap:12px;align-content:center">
-          <div style="font-size:11px;letter-spacing:.03em;text-transform:uppercase;font-weight:600;color:rgba(0,0,0,.4)">React · Flask · OCR</div>
-          <div style="font-weight:600;letter-spacing:-.024em;font-size:26px;line-height:1.1">AzXərclə</div>
-          <p style="margin:0;font-size:14px;line-height:1.62;color:rgba(0,0,0,.72);text-wrap:pretty">Reads Azerbaijani e-kassa receipts from a photo, the device camera or the receipt QR code, extracts line items with OCR, and builds a per-store price history for comparing prices across shops.</p>
-          <a href="https://github.com/NasirMustafayev/AzXercle" target="_blank" rel="noopener" style="justify-self:start;display:inline-flex;align-items:center;gap:6px;font-size:12.5px;color:#0066cc;text-decoration:none">GitHub<span style="font-size:13px">↗</span></a>
+          <div style="font-size:11px;letter-spacing:.03em;text-transform:uppercase;font-weight:600;color:rgba(0,0,0,.4)">Android · React · Capacitor · SQLite</div>
+          <h3 style="margin:0;font-weight:600;letter-spacing:-.024em;font-size:26px;line-height:1.1">AzXərclə — receipt spending tracker for Android</h3>
+          <p style="margin:0;font-size:14px;line-height:1.62;color:rgba(0,0,0,.72);text-wrap:pretty">Scan the QR code on an Azerbaijani e-kassa receipt and the items, quantities and prices are read for you — then filed into categories, a monthly budget with a <em>safe to spend today</em> figure, and a price comparison across shops built from scanned receipts.</p>
+          <p style="margin:0;font-size:14px;line-height:1.62;color:rgba(0,0,0,.72);text-wrap:pretty">It began as a React and Flask web prototype and is now a local-first Android app: the database runs on the phone, receipts are read with on-device OCR, and cloud backup is optional. Camera and bank-receipt import, PDF statements, debts and reminders, home-screen widgets, PIN and fingerprint lock, in Azerbaijani, Russian and English.</p>
+          <div style="display:flex;flex-wrap:wrap;align-items:center;gap:18px">
+            <a href="https://azxercle-sync.onrender.com/privacy" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;font-size:12.5px;color:#0066cc;text-decoration:none">Privacy policy<span style="font-size:13px">↗</span></a>
+          </div>
         </div>
+      </div>
+      <ul class="azx-shots" aria-label="AzXərclə app screenshots (interface in Azerbaijani)">
+        <li class="azx-shot"><figure style="margin:0"><div class="azx-phone"><img src="uploads/azx-home.webp" width="480" height="949" alt="Dashboard with total spending, a category donut chart and recent receipts" loading="lazy" decoding="async"></div><figcaption><b>Dashboard</b>Where the money went, by category and by day.</figcaption></figure></li>
+        <li class="azx-shot"><figure style="margin:0"><div class="azx-phone"><img src="uploads/azx-scan.webp" width="480" height="949" alt="Add-expense screen with a live camera view scanning a receipt QR code" loading="lazy" decoding="async"></div><figcaption><b>Scan a receipt</b>Point the camera at the e-kassa QR code, or use a bank receipt, fiscal ID, or type it in.</figcaption></figure></li>
+        <li class="azx-shot"><figure style="margin:0"><div class="azx-phone"><img src="uploads/azx-bank.webp" width="480" height="949" alt="A bank receipt imported as an expense with payee, amount, date and category" loading="lazy" decoding="async"></div><figcaption><b>Bank receipts</b>Share one from a banking app and it is filled in for you.</figcaption></figure></li>
+        <li class="azx-shot"><figure style="margin:0"><div class="azx-phone"><img src="uploads/azx-prices.webp" width="480" height="949" alt="Price hub with a product search and shops grouped by type" loading="lazy" decoding="async"></div><figcaption><b>Price hub</b>Prices gathered from scanned receipts, grouped by kind of place.</figcaption></figure></li>
+        <li class="azx-shot"><figure style="margin:0"><div class="azx-phone"><img src="uploads/azx-price-item.webp" width="480" height="949" alt="One product listed by branch from cheapest to dearest with the saving shown" loading="lazy" decoding="async"></div><figcaption><b>Cheaper nearby</b>The same product ranked by branch, with what you would save.</figcaption></figure></li>
+        <li class="azx-shot"><figure style="margin:0"><div class="azx-phone"><img src="uploads/azx-budget.webp" width="480" height="949" alt="Monthly budget card with the amount safe to spend today and upcoming payments" loading="lazy" decoding="async"></div><figcaption><b>Budget</b>A safe figure for today, plus payments coming up.</figcaption></figure></li>
+        <li class="azx-shot"><figure style="margin:0"><div class="azx-phone"><img src="uploads/azx-history.webp" width="480" height="949" alt="Searchable receipt history grouped by day and month" loading="lazy" decoding="async"></div><figcaption><b>History</b>Every receipt by day, searchable by shop or item.</figcaption></figure></li>
+        <li class="azx-shot"><figure style="margin:0"><div class="azx-phone"><img src="uploads/azx-debts.webp" width="480" height="949" alt="Debts screen showing money owed and money lent with due dates" loading="lazy" decoding="async"></div><figcaption><b>Debts</b>Who owes whom, with due dates and reminders.</figcaption></figure></li>
+      </ul>
       </div>
       <div class="work" style="display:grid;grid-template-columns:1fr 1.15fr;gap:40px;align-items:center">
         <div style="grid-column:2;grid-row:1;aspect-ratio:16/10;border-radius:14px;overflow:hidden;background:#eef1f6;box-shadow:0 1px 2px rgba(0,0,0,.07), 0 14px 34px rgba(0,0,0,.09)">
-          <img src="uploads/project-hrim.webp" alt="HRIM screenshot" style="display:block;width:100%;height:100%;object-fit:cover;object-position:left top">
+          <img src="uploads/project-hrim.webp" alt="HRIM human-resources system — employee records and payroll dashboard" width="1400" height="799" loading="lazy" decoding="async" style="display:block;width:100%;height:100%;object-fit:cover;object-position:left top">
         </div>
         <div style="grid-column:1;grid-row:1;display:grid;gap:12px;align-content:center">
           <div style="font-size:11px;letter-spacing:.03em;text-transform:uppercase;font-weight:600;color:rgba(0,0,0,.4)">TS · Node · PostgreSQL</div>
-          <div style="font-weight:600;letter-spacing:-.024em;font-size:26px;line-height:1.1">HRIM</div>
+          <h3 style="margin:0;font-weight:600;letter-spacing:-.024em;font-size:26px;line-height:1.1">HRIM</h3>
           <p style="margin:0;font-size:14px;line-height:1.62;color:rgba(0,0,0,.72);text-wrap:pretty">One system for a company's HR processes: employee records, payroll and timesheets, a public job listing and application page, and a PWA for clocking in and out.</p>
           <div style="display:flex;flex-wrap:wrap;align-items:center;gap:18px">
             <a href="https://hrimaz.up.railway.app/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;font-size:12.5px;color:#0066cc;text-decoration:none">Live demo<span style="font-size:13px">↗</span></a>
-            <a href="https://github.com/NasirMustafayev/hrim" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;font-size:12.5px;color:#0066cc;text-decoration:none">GitHub<span style="font-size:13px">↗</span></a>
           </div>
         </div>
       </div>
       <div class="work" style="display:grid;grid-template-columns:1.15fr 1fr;gap:40px;align-items:center">
         <div style="grid-column:1;grid-row:1;aspect-ratio:16/10;border-radius:14px;overflow:hidden;background:#eef1f6;box-shadow:0 1px 2px rgba(0,0,0,.07), 0 14px 34px rgba(0,0,0,.09)">
-          <img src="uploads/project-moviesdb.webp" alt="MoviesDB screenshot" style="display:block;width:100%;height:100%;object-fit:cover;object-position:left top">
+          <img src="uploads/project-moviesdb.webp" alt="MoviesDB — film browsing app built with TypeScript and Material UI" width="1400" height="800" loading="lazy" decoding="async" style="display:block;width:100%;height:100%;object-fit:cover;object-position:left top">
         </div>
         <div style="grid-column:2;grid-row:1;display:grid;gap:12px;align-content:center">
           <div style="font-size:11px;letter-spacing:.03em;text-transform:uppercase;font-weight:600;color:rgba(0,0,0,.4)">TS · Material UI</div>
-          <div style="font-weight:600;letter-spacing:-.024em;font-size:26px;line-height:1.1">MoviesDB</div>
+          <h3 style="margin:0;font-weight:600;letter-spacing:-.024em;font-size:26px;line-height:1.1">MoviesDB</h3>
           <p style="margin:0;font-size:14px;line-height:1.62;color:rgba(0,0,0,.72);text-wrap:pretty">Front-end app pulling the latest films from a public API, with user accounts, a favourites list, and rendering optimisations for fast load and search.</p>
-          <a href="https://github.com/NasirMustafayev/Practice1_MoviesDB" target="_blank" rel="noopener" style="justify-self:start;display:inline-flex;align-items:center;gap:6px;font-size:12.5px;color:#0066cc;text-decoration:none">GitHub<span style="font-size:13px">↗</span></a>
         </div>
       </div>
     </div>
@@ -332,17 +415,14 @@
       <div style="padding:22px 0;border-bottom:1px solid rgba(0,0,0,.12);display:grid;gap:9px;align-content:start">
         <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px"><span style="font-weight:600;letter-spacing:-.022em;font-size:18px">CVPilot</span><span style="font-size:9px;letter-spacing:.04em;text-transform:uppercase;font-weight:500;color:rgba(0,0,0,.42)">FastAPI · JWT</span></div>
         <p style="margin:0;font-size:13.5px;line-height:1.6;color:rgba(0,0,0,.7);text-wrap:pretty">Separate HR and candidate workspaces for uploading a CV, scoring it against job requirements, and reloading saved analyses behind JWT-authenticated API routes.</p>
-        <a href="https://github.com/NasirMustafayev/CVPilot" target="_blank" rel="noopener" style="justify-self:start;display:inline-flex;align-items:center;gap:6px;font-size:12px;color:#0066cc;text-decoration:none">GitHub<span style="font-size:13px">↗</span></a>
       </div>
       <div style="padding:22px 0;border-bottom:1px solid rgba(0,0,0,.12);display:grid;gap:9px;align-content:start">
         <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px"><span style="font-weight:600;letter-spacing:-.022em;font-size:18px">Tapis</span><span style="font-size:9px;letter-spacing:.04em;text-transform:uppercase;font-weight:500;color:rgba(0,0,0,.42)">Prisma · Socket.IO</span></div>
         <p style="margin:0;font-size:13.5px;line-height:1.6;color:rgba(0,0,0,.7);text-wrap:pretty">Swipe-based matching with real-time chat and JWT auth; containerised with Docker Compose, deployed on Railway, localised in Azerbaijani and English.</p>
-        <a href="https://github.com/NasirMustafayev/Tapis-prototype" target="_blank" rel="noopener" style="justify-self:start;display:inline-flex;align-items:center;gap:6px;font-size:12px;color:#0066cc;text-decoration:none">GitHub<span style="font-size:13px">↗</span></a>
       </div>
       <div style="padding:22px 0;border-bottom:1px solid rgba(0,0,0,.12);display:grid;gap:9px;align-content:start">
         <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px"><span style="font-weight:600;letter-spacing:-.022em;font-size:18px">E-Commerce Store</span><span style="font-size:9px;letter-spacing:.04em;text-transform:uppercase;font-weight:500;color:rgba(0,0,0,.42)">PHP · MySQL</span></div>
         <p style="margin:0;font-size:13.5px;line-height:1.6;color:rgba(0,0,0,.7);text-wrap:pretty">Complete storefront — catalogue, search, cart, checkout, order history and user accounts — plus an admin panel for managing products and orders.</p>
-        <a href="https://github.com/NasirMustafayev/eticaret" target="_blank" rel="noopener" style="justify-self:start;display:inline-flex;align-items:center;gap:6px;font-size:12px;color:#0066cc;text-decoration:none">GitHub<span style="font-size:13px">↗</span></a>
       </div>
     </div>
 
